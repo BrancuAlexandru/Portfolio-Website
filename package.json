@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/BrancuAlexandru/Portfolio-Website.git"
   },
-  "author": "",
+  "author": "Brancu Alexandru",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BrancuAlexandru/Portfolio-Website/issues"
@@ -31,5 +31,9 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   }
 }

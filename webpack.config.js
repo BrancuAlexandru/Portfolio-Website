@@ -13,11 +13,7 @@ module.exports = {
         options: { presets: ["@babel/env"] }
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      },
-      {
-        test: /\.s[ac]ss$/i,
+        test: /\.s(a|c)ss$/,
         use: ["style-loader", "sass-loader", "css-loader"]
       }
     ]
@@ -29,10 +25,9 @@ module.exports = {
     filename: "bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname, "public/"),
+    watchFiles: path.join(__dirname, "public/"),
     port: 3000,
-    publicPath: "http://localhost:3000/dist/",
-    hotOnly: true
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+    host: "localhost",
+    hot: true
+  }
 };
