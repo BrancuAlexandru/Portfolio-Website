@@ -15,6 +15,7 @@ class App extends React.Component {
         <About />
         <Projects />
         <Contact />
+        <div className="footer"></div>
       </div>
     );
   }
