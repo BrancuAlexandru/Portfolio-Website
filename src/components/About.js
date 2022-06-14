@@ -2,13 +2,13 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section className="About Container">
+    <section className="About SmallerWidth">
       <h1 className="section-title">About Me</h1>
       <div className="about-me-content">
         <div className="about-me-text">
           <div className="about-me-paragraph">
             <p>I want to make useful products and amazing services that can help people globally.</p>
-            <p>The software and web industries touch the lives of everyone, which is why it's my career.</p>
+            <p>The software and web industries touch the lives of everyone, which is why it's my choice as a career.</p>
           </div>
         </div>
         <div className="about-me-skills">

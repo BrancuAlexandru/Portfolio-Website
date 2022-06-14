@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="Hero Container">
+    <section className="Hero SmallerWidth">
       <div className="gradient">
         <div className="gradient-left">
           <h2>Hi! I'm Alex,</h2>

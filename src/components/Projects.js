@@ -8,14 +8,40 @@ const Square = () => {
 
 const Squares = () => {
   return (
-    <div className="squares"></div>
+    <div className="squares">
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+      <Square />
+    </div>
   );
 }
 
 const Projects = () => {
   return (
-    <section className="Projects Container">
-      <h1 className="section-title">Projects</h1>
+    <section className="Projects">
+      <h1>Projects</h1>
       <div className="film">
         <Squares />
         <div className="projects-content">
