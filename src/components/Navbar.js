@@ -2,11 +2,11 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <div className="Navbar Container">
+    <section className="Navbar Container">
       <h2 className="name">Brancu Alexandru</h2>
-      <button>PROJECTS</button>
-      <button>CONTACT</button>
-    </div>
+      <button className="project-button">PROJECTS</button>
+      <button className="contact-button">CONTACT</button>
+    </section>
   );
 }
 
