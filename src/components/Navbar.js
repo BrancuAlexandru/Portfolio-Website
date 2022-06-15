@@ -4,8 +4,8 @@ const Navbar = () => {
   return (
     <section className="Navbar SmallerWidth">
       <h2 className="name">Brancu Alexandru</h2>
-      <button className="project-button">PROJECTS</button>
-      <button className="contact-button">CONTACT</button>
+      <a className="project-button cta" href="#Projects">PROJECTS</a>
+      <a className="contact-button cta" href="#Contact">CONTACT</a>
     </section>
   );
 }

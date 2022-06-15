@@ -7,7 +7,7 @@ const Hero = () => {
         <div className="gradient-left">
           <h2>Hi! I'm Alex,</h2>
           <h2>a developer eager to produce quality work.</h2>
-          <button>Show Me!</button>
+          <a className="cta" href="#Projects">Show Me!</a>
         </div>
         <div className="gradient-right">
           <img src="./images/character.svg" alt="developer character"/>
