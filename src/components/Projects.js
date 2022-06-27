@@ -66,13 +66,19 @@ const Projects = () => {
         <Squares />
         <div className="projects-content">
           <div className="project cta">
-            <img src="./images/firstProject.png" className="project-image"/>
+            <div className="project-image">
+              <img src="./images/firstProject.png" alt=""/>
+            </div>
           </div>
           <div className="project cta">
-            <img src="./images/secondProject.png" className="project-image"/>
+            <div className="project-image">
+              <img src="./images/secondProject.png" alt=""/>
+            </div>
           </div>
           <div className="project cta">
-            <img src="./images/thirdProject.png" className="project-image"/>
+            <div className="project-image">
+              <img src="./images/thirdProject.png" alt=""/>
+            </div>
           </div>
         </div>
         <Squares />
