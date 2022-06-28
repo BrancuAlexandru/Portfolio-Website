@@ -5,11 +5,12 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import background from '../public/images/background.svg';
 
 class App extends React.Component {
   render(){
     return(
-      <div className="App">
+      <div className="App" style={{backgroundImage: 'url(../public/images/background.svg)'}}>
         <Navbar />
         <Hero />
         <About />
