@@ -13,13 +13,13 @@ const About = () => {
         </div>
         <div className="about-me-skills">
           <div className="skill-images">
-            <img src="./images/html.png" className="cta" alt="html icon"/>
-            <img src="./images/css.png" className="cta" alt="css icon"/>
-            <img src="./images/javascript.png" className="cta" alt="javascript icon"/>
-            <img src="./images/sass.png" className="cta" alt="sass icon"/>
-            <img src="./images/react.png" className="cta" alt="react icon"/>
-            <img src="./images/git.png" className="cta" alt="git icon"/>
-            <img src="./images/npm.png" className="cta" alt="npm icon"/>
+            <img src="./images/icons/html.png" className="cta" alt="html icon"/>
+            <img src="./images/icons/css.png" className="cta" alt="css icon"/>
+            <img src="./images/icons/javascript.png" className="cta" alt="javascript icon"/>
+            <img src="./images/icons/sass.png" className="cta" alt="sass icon"/>
+            <img src="./images/icons/react.png" className="cta" alt="react icon"/>
+            <img src="./images/icons/git.png" className="cta" alt="git icon"/>
+            <img src="./images/icons/npm.png" className="cta" alt="npm icon"/>
           </div>
         </div>
       </div>

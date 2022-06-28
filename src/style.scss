@@ -16,7 +16,7 @@ html {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #ffffff;
+  background-image: url(../public/images/background.svg);
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   overflow: hidden;
@@ -28,7 +28,6 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #ffffff;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
@@ -65,7 +64,6 @@ a {
   .project-button {
     margin-top: 54px;
     margin-right: 16px;
-    background-color: white;
     color: #080e4a;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -191,8 +189,21 @@ a {
       flex-direction: row;
       justify-content: center;
       background-color: #2b2b2b;
+      z-index: 1;
+      &::after {
+        content: '';
+        position: absolute;
+        margin: auto 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 101%;
+        background-color: #2b2b2b;
+        z-index: 1;
+      }
       .project {
         margin: 0 20px;
+        z-index: 2;
         .project-image {
           width: 370px;
           height: 215px;
@@ -224,6 +235,7 @@ a {
     background-color: #2b2b2b;
     height: 60px;
     width: 100%;
+    z-index: 2;
     .Square {
       position: relative;
       width: 20px;
@@ -231,6 +243,7 @@ a {
       margin: 0 11px;
       border-radius: 2px;
       background-color: #ffffff;
+      z-index: 2;
     }
     .FirstSquare {
       position: relative;
@@ -239,6 +252,7 @@ a {
       margin: 0 11px 0 20px;
       border-radius: 2px;
       background-color: #ffffff;
+      z-index: 2;
     }
     .LastSquare {
       position: relative;
@@ -247,6 +261,7 @@ a {
       margin: 0 20px 0 11px;
       border-radius: 2px;
       background-color: #ffffff;
+      z-index: 2;
     }
   }
 }

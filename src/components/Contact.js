@@ -12,15 +12,15 @@ const Contact = () => {
         </div>
         <div className="links">
           <a className="github-link cta" href="https://github.com/BrancuAlexandru" target="_blank">
-            <img src="./images/github.png" className="link-image" alt="github icon"/>
+            <img src="./images/icons/github.png" className="link-image" alt="github icon"/>
             <h2>GitHub</h2>
           </a>
           <a className="resume-link cta" href="./misc/brancuAlexandruResume.pdf" download>
-            <img src="./images/resume.png" className="link-image" alt="resume icon"/>
+            <img src="./images/icons/resume.png" className="link-image" alt="resume icon"/>
             <h2>Resume</h2>
           </a>
           <a className="linkedin-link cta" href="https://www.linkedin.com/in/alexandru-brancu-a9088a184/" target="_blank">
-            <img src="./images/linkedin.png" className="link-image" alt="linkedin icon"/>
+            <img src="./images/icons/linkedin.png" className="link-image" alt="linkedin icon"/>
             <h2>LinkedIn</h2>
           </a>
         </div>
