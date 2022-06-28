@@ -52,7 +52,6 @@ const Squares = () => {
       <Square />
       <Square />
       <Square />
-      <Square />
       <LastSquare />
     </div>
   );
