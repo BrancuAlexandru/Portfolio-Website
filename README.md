@@ -27,12 +27,17 @@ To-Do:
   - Change all icons to .svg and then change all .svg files to inline svg to remove most http requests
   - Change GitHub, LinkedIn and Resume icon color to better suit design
   - Convert project images to .webp format
-  - Add Dark Theme/Light theme toggle button
+  - Add dark theme/light theme toggle button
+  - Make a dark theme
+  - Automatically theme based on device prefference
   - Add dynamically mounted/unmounted 'back to top' arrow button
+  - Change 'About Me' text to state more experience
   - Redesign and remake 'About Me' section for better design cohesiveness
   - Add photos, tech and case study carousel menus to projects
+  - Add functionality that showcases different project photos on hover
   - Implement Firebase and cloud database services from Firebase to make the contact form work
   - Add submit successful popup message upon valid contact form submission
+  - Change folder structure to work with Firebase
   - Switch website from old to new in the project section of the Firebase app
   - Add 4k, tablet and mobile responsiveness
   - Make bundle.js cache
@@ -40,4 +45,5 @@ To-Do:
   - Implement lazy loading
   - Put lang attribute into html
   - Add meta description
+  - Make compatible with Chrome, Firefox, Edge, Opera
   - Make into PWA (?)
