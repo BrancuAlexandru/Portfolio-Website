@@ -10,7 +10,7 @@ import background from '../public/images/background.svg';
 class App extends React.Component {
   render(){
     return(
-      <div className="App" style={{backgroundImage: 'url(../public/images/background.svg)'}}>
+      <div className="App" style={{backgroundImage: 'url(./images/background.svg)'}}>
         <Navbar />
         <Hero />
         <About />
