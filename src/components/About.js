@@ -12,14 +12,13 @@ const About = () => {
           </div>
         </div>
         <div className="about-me-skills">
-          <div className="skill-images">
-            <img src="./images/icons/sass.png" className="cta" alt="sass icon"/>
-            <img src="./images/icons/react.png" className="cta" alt="react icon"/>
-            <img src="./images/icons/git.png" className="cta" alt="git icon"/>
-            <img src="./images/icons/html.png" className="cta" alt="html icon"/>
-            <img src="./images/icons/css.png" className="cta" alt="css icon"/>
-            <img src="./images/icons/javascript.png" className="cta" alt="javascript icon"/>
-            <img src="./images/icons/npm.png" className="cta" alt="npm icon"/>
+          <div className="skill-icons">
+            <div className="skill-icon sass-icon" alt="sass icon"></div>
+            <div className="skill-icon react-icon" alt="react icon"></div>
+            <div className="skill-icon git-icon" alt="git icon"></div>
+            <div className="skill-icon firebase-icon" alt="firebase icon"></div>
+            <div className="skill-icon webpack-icon" alt="webpack icon"></div>
+            <div className="skill-icon javascript-icon" alt="javascript icon"></div>
           </div>
         </div>
       </div>

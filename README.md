@@ -57,9 +57,7 @@ Technology used:
 
 
 To-Do:
-  + Add box shadow to most text for readability
-  - Add 2 decorative blank projects left and right of the real ones
-  - Remove HTML, CSS icons; add Firebase and Webpack
+  + Remove HTML, CSS icons; add Firebase and Webpack
   - Change all icons to .svg and then change all .svg files to inline svg to remove most http requests
   - Change GitHub, LinkedIn and Resume icon color to better suit design
   - Convert project images to .webp format
@@ -72,7 +70,7 @@ To-Do:
 
 
 
-  
+
   - Add dark theme/light theme toggle button
   - Make a dark theme
   - Automatically theme based on device prefference
