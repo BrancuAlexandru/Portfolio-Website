@@ -18,10 +18,46 @@ Technology used:
   Design:
    - Adobe Photoshop CC
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 To-Do:
-  - Make buttons more responsive
-  - Add box shadow to most text for readability
-  - Make a single component generate all the squares in the movie film
+  + Add box shadow to most text for readability
   - Add 2 decorative blank projects left and right of the real ones
   - Remove HTML, CSS icons; add Firebase and Webpack
   - Change all icons to .svg and then change all .svg files to inline svg to remove most http requests
@@ -39,11 +75,13 @@ To-Do:
   - Add submit successful popup message upon valid contact form submission
   - Change folder structure to work with Firebase
   - Switch website from old to new in the project section of the Firebase app
+  - Make projects button have proper content size
   - Add 4k, tablet and mobile responsiveness
   - Make bundle.js cache
   - Remove unused fonts
   - Implement lazy loading
-  - Put lang attribute into html
+  - Put lang attribute into HTML
   - Add meta description
   - Make compatible with Chrome, Firefox, Edge, Opera
+  - Add fade in animations for everything
   - Make into PWA (?)

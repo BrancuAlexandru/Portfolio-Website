@@ -25,6 +25,7 @@ html {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   overflow: hidden;
+  user-select: none;
 }
 
 section {
@@ -47,13 +48,18 @@ a {
   font-weight: 500;
   font-size: 70px;
   margin: 120px 0 30px 130px;
+  &:hover {
+    cursor: default;
+  }
 }
 
 .cta {
+  -webkit-user-drag: none;
   &:hover {
     cursor: pointer;
   }
 }
+
 
 .Navbar {
   display: flex;
@@ -65,16 +71,23 @@ a {
     font-family: 'Courier New';
     font-weight: 500;
     font-size: 48px;
+    user-select: text;
   }
-  .project-button {
+  #ProjectsButton {
     margin-top: 54px;
     margin-right: 16px;
     color: #080e4a;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 28px;
+    &:hover {
+      color: #585a70;
+    }
+    &:active {
+      color: #03051b;
+    }
   }
-  .contact-button {
+  #ContactButton {
     margin-top: 50px;
     margin-left: 16px;
     background-color: #6d13c2;
@@ -87,6 +100,14 @@ a {
     max-height: 28px;
     display: flex;
     align-items: center;
+    &:hover {
+      background-color: #8239c5;
+      color: #ffffff;
+    }
+    &:active {
+      background-color: #550f97;
+      color: #e1e4ff;
+    }
   }
 }
 
@@ -109,6 +130,9 @@ a {
         max-width: 445px;
         font-weight: 400;
         font-size: 40px;
+        &:hover {
+          cursor: default;
+        }
       }
       a {
         text-align: center;
@@ -124,6 +148,16 @@ a {
         font-size: 25px;
         box-shadow: 4px 4px #211161;
       }
+      #ShowMeButton {
+        &:hover {
+          background-color: #ffffff;
+          color: #731bc5;
+        }
+        &:active {
+          color: #550f97;
+          background-color: #d9cde0;
+        }
+      }
     }
     .gradient-right {
       max-width: 50%;
@@ -134,6 +168,7 @@ a {
           max-height: 80%;
           margin-top: 10%;
           margin-left: 5%;
+          -webkit-user-drag: none;
         }
       }
     }
@@ -156,6 +191,7 @@ a {
         img {
           max-width: 115px;
           max-height: 115px;
+          -webkit-user-drag: none;
         }
       }
     }
@@ -169,6 +205,9 @@ a {
           padding: 30px 50px 30px 50px;
           font-weight: 500;
           font-size: 28px;
+          &:hover {
+            cursor: default;
+          }
         }
       }
     }
@@ -186,6 +225,10 @@ a {
     font-weight: 500;
     font-size: 70px;
     margin: 120px 0 30px 130px;
+    &:hover {
+      cursor: default;
+      user-select: none;
+    }
   }
   .film {
     transform: rotateZ(-5deg) skew(-5deg);
@@ -223,9 +266,17 @@ a {
             background-color: #000000;
             opacity: 0.2;
           }
+          &:hover::after {
+            background-color: #000000;
+            opacity: 0.1;
+          }
+          &:active::after {
+      
+          }
           img {
             width: 100%;
             height: 100%;
+            -webkit-user-drag: none;
           }
         }
       }
@@ -318,7 +369,7 @@ a {
         margin-bottom: 35px;
         resize: none;
       }
-      button {
+      #SubmitButton {
         background-color: #6d13c2;
         color: #f7f8ff;
         width: 100%;
@@ -327,6 +378,14 @@ a {
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
         font-size: 22px;
+        &:hover {
+          background-color: #8239c5;
+          color: #ffffff;
+        }
+        &:active {
+          background-color: #550f97;
+          color: #e1e4ff;
+        }
       }
     }
     .links {
@@ -334,11 +393,38 @@ a {
       flex-direction: column;
       margin-top: 20px;
       margin-left: 90px;
+      #GitHubButton {
+        &:hover {
+          color: #9660cc;
+        }
+        &:active {
+          color: #28004d;
+        }
+      }
+      #ResumeButton {
+        &:hover {
+          color: #9660cc;
+        }
+        &:active {
+          color: #28004d;
+        }
+      }
+      #LinkedInButton:hover {
+        &:hover {
+          color: #9660cc;
+        }
+        &:active {
+          color: #28004d;
+        }
+      }
       a {
         display: flex;
         flex-direction: row;
         align-items: center;
         color: #3e0078;
+        img {
+          -webkit-user-drag: none;
+        }
         h2 {
           margin-left: 8px;
           font-weight: 600;

@@ -1,58 +1,27 @@
 import React from 'react';
 
-const Square = () => {
-  return (
-    <div className="Square"></div>
-  );
-}
-const FirstSquare = () => {
-  return (
-    <div className="FirstSquare"></div>
-  );
-}
-const LastSquare = () => {
-  return (
-    <div className="LastSquare"></div>
-  );
-}
-
 const Squares = () => {
+  const makeSquare = () => {
+    return (
+      <div className="Square"></div>
+    );
+  }
+  const makeSquares = (n) => {
+    let squareArray = [];
+    for (let i = 0; i < n; i++) {
+      squareArray[i] = makeSquare();
+    }
+    return (
+      <div className="Squares">
+        <div className="FirstSquare"></div>
+          {squareArray.map((item) => item)}
+        <div className="LastSquare"></div>
+      </div>
+    );
+  }
   return (
-    <div className="Squares">
-      <FirstSquare />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <Square />
-      <LastSquare />
+    <div>
+      {makeSquares(32)}
     </div>
   );
 }
