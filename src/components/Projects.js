@@ -1,31 +1,5 @@
 import React from 'react';
 
-const Squares = () => {
-  const makeSquare = () => {
-    return (
-      <div className="Square"></div>
-    );
-  }
-  const makeSquares = (n) => {
-    let squareArray = [];
-    for (let i = 0; i < n; i++) {
-      squareArray[i] = makeSquare();
-    }
-    return (
-      <div className="Squares">
-        <div className="FirstSquare"></div>
-          {squareArray.map((item) => item)}
-        <div className="LastSquare"></div>
-      </div>
-    );
-  }
-  return (
-    <div>
-      {makeSquares(32)}
-    </div>
-  );
-}
-
 const Projects = () => {
   return (
     <section className="Projects" id="Projects">
@@ -52,6 +26,33 @@ const Projects = () => {
         <Squares />
       </div>
     </section>
+  );
+}
+
+const Squares = () => {
+  const makeOneSquare = (key) => {
+    return (
+      <div className="Square" key={key}></div>
+    );
+  }
+  // Returning n number of 'Square' divs with unique keys (i) into an array mapped inside 'Squares'
+  const makeSquares = (n) => {
+    let squareArray = [];
+    for (let i = 0; i < n; i++) {
+      squareArray[i] = makeOneSquare(i);
+    }
+    return (
+      <div className="Squares">
+        <div className="FirstSquare"></div>
+          {squareArray.map((item) => item)}
+        <div className="LastSquare"></div>
+      </div>
+    );
+  }
+  return (
+    <div>
+      {makeSquares(32)}
+    </div>
   );
 }
 

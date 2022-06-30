@@ -48,6 +48,7 @@ a {
   font-weight: 500;
   font-size: 70px;
   margin: 120px 0 30px 130px;
+  text-shadow: 4px 4px #9196cf;
   &:hover {
     cursor: default;
   }
@@ -72,14 +73,16 @@ a {
     font-weight: 500;
     font-size: 48px;
     user-select: text;
+    text-shadow: 1px 1px #938ab4;
   }
   #ProjectsButton {
     margin-top: 54px;
     margin-right: 16px;
-    color: #080e4a;
+    color: #461d7c;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 28px;
+    text-shadow: 1px 1px #938ab4;
     &:hover {
       color: #585a70;
     }
@@ -100,6 +103,8 @@ a {
     max-height: 28px;
     display: flex;
     align-items: center;
+    text-shadow: 2px 1px #4e2f86;
+    box-shadow: 3px 3px #211161;
     &:hover {
       background-color: #8239c5;
       color: #ffffff;
@@ -130,6 +135,7 @@ a {
         max-width: 445px;
         font-weight: 400;
         font-size: 40px;
+        text-shadow: 3px 2px #3f2d8a;
         &:hover {
           cursor: default;
         }
@@ -149,6 +155,7 @@ a {
         box-shadow: 4px 4px #211161;
       }
       #ShowMeButton {
+        text-shadow: 1px 1px #b1a7bb;
         &:hover {
           background-color: #ffffff;
           color: #731bc5;
@@ -183,7 +190,7 @@ a {
     .about-me-skills {
       background-color: #f2f2f2;
       margin-left: 10px;
-      border-bottom: 5px solid #3e0b6b;
+      border-bottom: 5px solid #2e094e;
       .skill-images {
         max-width: 376px;
         text-align: center;
@@ -203,8 +210,10 @@ a {
           color: #080e4a;
           max-width: 575px;
           padding: 30px 50px 30px 50px;
+          margin-top: 10px;
           font-weight: 500;
           font-size: 28px;
+          text-shadow: 1px 1px #ad8fc7;
           &:hover {
             cursor: default;
           }
@@ -220,11 +229,12 @@ a {
   max-width: 100%;
   h1 {
     position: relative;
-    left: 14.5%;
+    left: 13.5%;
     color: #080d4a;
     font-weight: 500;
     font-size: 70px;
     margin: 120px 0 30px 130px;
+    text-shadow: 4px 4px #9196cf;
     &:hover {
       cursor: default;
       user-select: none;
@@ -238,20 +248,16 @@ a {
       justify-content: center;
       background-color: #2b2b2b;
       z-index: 1;
-      &::after {
-        content: '';
-        position: absolute;
-        margin: auto 0;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 101%;
-        background-color: #2b2b2b;
-        z-index: 1;
-      }
       .project {
         margin: 0 20px;
         z-index: 2;
+        transform: scale(1);
+        transition: .2s transform ease;
+        &:hover {
+          transform: scale(1.1);
+          transition: .2s ease;
+          transition-property: transform opacity;
+        }
         .project-image {
           width: 370px;
           height: 215px;
@@ -265,13 +271,17 @@ a {
             height: 100%;
             background-color: #000000;
             opacity: 0.2;
+            transform: scale(1);
+            transition: .2s transform ease;
           }
           &:hover::after {
-            background-color: #000000;
             opacity: 0.1;
+            transform: scale(1.1);
+            transition: .2s ease;
+            transition-property: transform opacity;
           }
           &:active::after {
-      
+            opacity: 0.35;
           }
           img {
             width: 100%;
@@ -345,7 +355,7 @@ a {
       flex-direction: column;
       .textInput {
         color: #868686;
-        border-bottom: 4px solid #3e0b6b;
+        border-bottom: 4px solid #2e094e;
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 20px;
@@ -378,6 +388,7 @@ a {
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
         font-size: 22px;
+        text-shadow: 2px 1px #4e2f86;
         &:hover {
           background-color: #8239c5;
           color: #ffffff;
@@ -393,6 +404,7 @@ a {
       flex-direction: column;
       margin-top: 20px;
       margin-left: 90px;
+      text-shadow: 2px 2px #9196cf;
       #GitHubButton {
         &:hover {
           color: #9660cc;
