@@ -57,8 +57,7 @@ Technology used:
 
 
 To-Do:
-  + Remove HTML, CSS icons; add Firebase and Webpack
-  - Change all icons to .svg and then change all .svg files to inline svg to remove most http requests
+  + Change all icons to .svg and then change all .svg files to inline svg to remove most http requests
   - Change GitHub, LinkedIn and Resume icon color to better suit design
   - Convert project images to .webp format
 
@@ -71,8 +70,23 @@ To-Do:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   - Add dark theme/light theme toggle button
   - Make a dark theme
+  - Implement BEM
   - Automatically theme based on device prefference
   - Add dynamically mounted/unmounted 'back to top' arrow button
   - Change 'About Me' text to state more experience

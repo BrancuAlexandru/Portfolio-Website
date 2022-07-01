@@ -75,7 +75,7 @@ a {
     user-select: text;
     text-shadow: 1px 1px #938ab4;
   }
-  #ProjectsButton {
+  #projects-button {
     margin-top: 54px;
     margin-right: 16px;
     color: #461d7c;
@@ -90,7 +90,7 @@ a {
       color: #03051b;
     }
   }
-  #ContactButton {
+  #contact-button {
     margin-top: 50px;
     margin-left: 16px;
     background-color: #6d13c2;
@@ -154,7 +154,7 @@ a {
         font-size: 25px;
         box-shadow: 4px 4px #211161;
       }
-      #ShowMeButton {
+      #show-me-button {
         text-shadow: 1px 1px #b1a7bb;
         &:hover {
           background-color: #ffffff;
@@ -191,35 +191,19 @@ a {
       background-color: #f2f2f2;
       margin-left: 10px;
       border-bottom: 5px solid #2e094e;
+      width: 300px;
       .skill-icons {
         display: flex;
         justify-content: center;
-        max-width: 350px;
-        margin-top: 45px;
-        .skill-icon  {
-          margin: 0 10px;
-          position: relative;
-          width: 115px;
-          height: 115px;
+        margin-top: 30px;
+        transform: scale(3);
+        display: block;
+        width: 40px;
+        height: 40px;
+        .skill-icon {
+          width: 32px;
+          height: 32px;
           -webkit-user-drag: none;
-        }
-        .sass-icon {
-          background-image: url("../public/images/icons/sass.svg");
-        }
-        .react-icon {
-          background-image: url("../public/images/icons/react.svg");
-        }
-        .git-icon {
-          background-image: url("../public/images/icons/git.svg");
-        }
-        .firebase-icon {
-          background-image: url("../public/images/icons/firebase.svg");
-        }
-        .webpack-icon {
-          background-image: url("../public/images/icons/webpack.svg");
-        }
-        .javascript-icon {
-          background-image: url("../public/images/icons/javascript.svg");
         }
       }
     }
@@ -227,11 +211,16 @@ a {
       background-color: #f2f2f2;
       border-bottom: 5px solid #3e0b6b;
       .about-me-paragraph {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 15px;
+        margin-bottom: 15px;
         p {
           color: #080e4a;
           max-width: 575px;
-          padding: 30px 50px 30px 50px;
-          margin-top: 10px;
+          padding: 15px 50px 15px 30px;
           font-weight: 500;
           font-size: 28px;
           text-shadow: 1px 1px #ad8fc7;
@@ -326,6 +315,16 @@ a {
         background-color: #212121;
       }
     }
+    .film-backside {
+      width: 60%;
+      height: 200px;
+      bottom: -41px;
+      left: -1px;
+      position: absolute;
+      background-color: #1d1d1d;
+      transform: rotateZ(5deg) skew(5deg);
+      z-index: -1;
+    }
   }
   .Squares {
     display: flex;
@@ -346,7 +345,7 @@ a {
       background-color: #ffffff;
       z-index: 2;
     }
-    .FirstSquare {
+    .first-square {
       position: relative;
       width: 20px;
       height: 20px;
@@ -355,7 +354,7 @@ a {
       background-color: #ffffff;
       z-index: 2;
     }
-    .LastSquare {
+    .last-square {
       position: relative;
       width: 20px;
       height: 20px;
@@ -367,7 +366,7 @@ a {
   }
 }
 
-.textInput {
+.text-input {
   color: #a8a8a8;
   background-color: #f2f2f2;
 }
@@ -388,7 +387,7 @@ a {
     .form {
       display: flex;
       flex-direction: column;
-      .textInput {
+      .text-input {
         color: #868686;
         border-bottom: 4px solid #2e094e;
         font-family: 'Montserrat', sans-serif;
@@ -402,19 +401,19 @@ a {
           color: #a8a8a8;
         }
       }
-      .nameInput {
+      .name-input {
         height: 35px;
         margin-bottom: 20px;
         width: 380px;
       }
-      .bodyInput {
+      .body-input {
         width: 493px;
         padding-top: 8px;
         height: 212px;
         margin-bottom: 35px;
         resize: none;
       }
-      #SubmitButton {
+      #submit-button {
         background-color: #6d13c2;
         color: #f7f8ff;
         width: 100%;
@@ -440,7 +439,7 @@ a {
       margin-top: 20px;
       margin-left: 90px;
       text-shadow: 2px 2px #9196cf;
-      #GitHubButton {
+      #GitHub-button {
         &:hover {
           color: #9660cc;
         }
@@ -448,7 +447,7 @@ a {
           color: #28004d;
         }
       }
-      #ResumeButton {
+      #resume-button {
         &:hover {
           color: #9660cc;
         }
@@ -456,7 +455,7 @@ a {
           color: #28004d;
         }
       }
-      #LinkedInButton:hover {
+      #LinkedIn-button {
         &:hover {
           color: #9660cc;
         }

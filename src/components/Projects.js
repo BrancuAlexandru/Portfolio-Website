@@ -26,6 +26,7 @@ const Projects = () => {
           <div className="blank-project-left"></div>
         </div>
         <Squares />
+        <div className="film-backside"></div>
       </div>
     </section>
   );
@@ -45,9 +46,9 @@ const Squares = () => {
     }
     return (
       <div className="Squares">
-        <div className="FirstSquare"></div>
+        <div className="first-square"></div>
           {squareArray.map((item) => item)}
-        <div className="LastSquare"></div>
+        <div className="last-square"></div>
       </div>
     );
   }
