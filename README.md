@@ -57,8 +57,7 @@ Technology used:
 
 
 To-Do:
-  + Change all icons to .svg and then change all .svg files to inline svg to remove most http requests
-  - Change GitHub, LinkedIn and Resume icon color to better suit design
+  + Change GitHub, LinkedIn and Resume icon color to better suit design
   - Convert project images to .webp format
 
 
