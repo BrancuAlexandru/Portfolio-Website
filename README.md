@@ -57,32 +57,7 @@ Technology used:
 
 
 To-Do:
-  + Change GitHub, LinkedIn and Resume icon color to better suit design
   - Convert project images to .webp format
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   - Add dark theme/light theme toggle button
   - Make a dark theme
   - Implement BEM
