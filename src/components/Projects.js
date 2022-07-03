@@ -10,17 +10,17 @@ const Projects = () => {
           <div className="blank-project-right"></div>
           <div className="project cta">
             <div className="project-image">
-              <img src="./images/firstProject.png" alt=""/>
+              <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
             </div>
           </div>
           <div className="project cta">
             <div className="project-image">
-              <img src="./images/secondProject.png" alt=""/>
+              <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
             </div>
           </div>
           <div className="project cta">
             <div className="project-image">
-              <img src="./images/thirdProject.png" alt=""/>
+              <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
             </div>
           </div>
           <div className="blank-project-left"></div>

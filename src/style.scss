@@ -273,7 +273,7 @@ a {
         &:hover {
           transform: scale(1.1);
           transition: .2s ease;
-          transition-property: transform opacity;
+          transition-property: transform, opacity;
         }
         .project-image {
           width: 370px;
@@ -295,7 +295,7 @@ a {
             opacity: 0.1;
             transform: scale(1.1);
             transition: .2s ease;
-            transition-property: transform opacity;
+            transition-property: transform, opacity;
           }
           &:active::after {
             opacity: 0.35;

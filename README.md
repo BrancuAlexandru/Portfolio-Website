@@ -57,8 +57,7 @@ Technology used:
 
 
 To-Do:
-  - Convert project images to .webp format
-  - Add dark theme/light theme toggle button
+  + Add dark theme/light theme toggle button
   - Make a dark theme
   - Implement BEM
   - Automatically theme based on device prefference
@@ -81,4 +80,5 @@ To-Do:
   - Add meta description
   - Make compatible with Chrome, Firefox, Edge, Opera
   - Add fade in animations for everything
+  - Make an HTTP request when Resume link is pressed, to remove http request and data use at load
   - Make into PWA (?)
