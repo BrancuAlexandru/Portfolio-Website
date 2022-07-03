@@ -24,8 +24,8 @@ html {
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  overflow: hidden;
   user-select: none;
+  overflow: hidden;
 }
 
 section {
@@ -75,6 +75,8 @@ a {
   display: flex;
   flex-direction: row !important;
   width: 100%;
+  height: 169px;
+  z-index: 1;
   .name {
     margin: 40px 275px 75px 0;
     color: #3f185f;

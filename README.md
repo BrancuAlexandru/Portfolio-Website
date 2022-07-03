@@ -93,6 +93,7 @@ To-Do:
   - Add photos, tech and case study carousel menus to projects
   - Add functionality that showcases different project photos on hover
   - Implement Firebase and cloud database services from Firebase to make the contact form work
+  - Things feel a bit cluttered, add some margin to sections
   - Add submit successful popup message upon valid contact form submission
   - Change folder structure to work with Firebase
   - Switch website from old to new in the project section of the Firebase app
