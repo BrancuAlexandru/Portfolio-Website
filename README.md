@@ -57,7 +57,6 @@ Technology used:
 
 
 To-Do:
-  + Add dark theme/light theme toggle button
   - Make a dark theme
   - Implement BEM
   - Automatically theme based on device prefference
@@ -81,4 +80,5 @@ To-Do:
   - Make compatible with Chrome, Firefox, Edge, Opera
   - Add fade in animations for everything
   - Make an HTTP request when Resume link is pressed, to remove http request and data use at load
+  - Add credits for svg images
   - Make into PWA (?)

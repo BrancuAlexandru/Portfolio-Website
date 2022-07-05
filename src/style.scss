@@ -86,7 +86,42 @@ a {
     user-select: text;
     text-shadow: 1px 1px #938ab4;
   }
-  #projects-button {
+  .theme-switch {
+    position: relative;
+    width: 53px;
+    height: 24px;
+    margin-top: 60px;
+    margin-right: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+    .switch-theme-button {
+      position: absolute;
+      background-image: linear-gradient(180deg, #dbdbdb 50%, #acacac 100%);
+      height: 20px;
+      width: 20px;
+      top: 0;
+      left: 0;
+      border-radius: 20px;
+      border: 2px solid #e9e9e9;
+      z-index: 2;
+      &:hover {
+        background-image: linear-gradient(180deg, #bdbdbd 50%, #868686 100%);
+        border: 2px solid #dddddd;
+      }
+    }
+    .bar {
+      background-color: rgb(82, 82, 82);
+      position: absolute;
+      height: 15px;
+      width: 50px;
+      top: 4px;
+      left: 2px;
+      border-radius: 25px;
+      z-index: 1;
+    }
+  }
+  .projects-button {
     margin-top: 54px;
     margin-right: 16px;
     color: #461d7c;
@@ -101,7 +136,7 @@ a {
       color: #03051b;
     }
   }
-  #contact-button {
+  .contact-button {
     margin-top: 50px;
     margin-left: 16px;
     background-color: #6d13c2;
@@ -200,7 +235,7 @@ a {
     flex-direction: row;
     justify-content: center;
     .about-me-skills {
-      background-color: #f2f2f2;
+      background-color: #f8f8f8;
       margin-left: 10px;
       border-bottom: 5px solid #2e094e;
       width: 300px;
@@ -215,7 +250,7 @@ a {
       }
     }
     .about-me-text {
-      background-color: #f2f2f2;
+      background-color: #f8f8f8;
       border-bottom: 5px solid #3e0b6b;
       .about-me-paragraph {
         display: flex;
@@ -373,11 +408,6 @@ a {
   }
 }
 
-.text-input {
-  color: #a8a8a8;
-  background-color: #f2f2f2;
-}
-
 .Contact {
   h1 {
     position: relative;
@@ -395,8 +425,8 @@ a {
       display: flex;
       flex-direction: column;
       .text-input {
-        color: #868686;
-        border-bottom: 4px solid #2e094e;
+        background-color: #f8f8f8;
+        border-bottom: 5px solid #2e094e;
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         font-size: 20px;
