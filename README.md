@@ -71,8 +71,10 @@ To-Do:
   - Change folder structure to work with Firebase
   - Switch website from old to new in the project section of the Firebase app
   - Make projects button have proper content size
+  - Add shadow to svg character
   - Add 4k, tablet and mobile responsiveness
   - Make bundle.js cache
+  - Change theme button from toggle with rail to button that changes from moon to sun
   - Remove unused fonts
   - Implement lazy loading
   - Put lang attribute into HTML
