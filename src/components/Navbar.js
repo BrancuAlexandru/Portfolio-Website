@@ -5,8 +5,7 @@ const Navbar = () => {
     <section className="Navbar">
       <h2 className="name">Brancu Alexandru</h2>
       <div className="theme-switch">
-        <div className="switch-theme-button"></div>
-        <div className="bar"></div>
+        <a className="theme-switch-button"></a>
       </div>
       <a className="projects-button cta" href="#Projects">PROJECTS</a>
       <a className="contact-button cta" href="#Contact">CONTACT</a>

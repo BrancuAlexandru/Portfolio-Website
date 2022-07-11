@@ -1,4 +1,3 @@
-import "./style.scss"
 import React from "react";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -6,19 +5,22 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
-class App extends React.Component {
-  render(){
-    return(
-      <div className="App">
-        <Background theme={darkThemeBackgroundColors}/>
-        <Navbar />
-        <Hero />
-        <About />
-        <Projects />
-        <Contact theme={darkThemeBackgroundColors}/>
-      </div>
-    );
+const App = (props) => {
+  if (props.theme === 'lightTheme') {
+    import('./lightTheme.scss');
+  } else {
+    import('./darkTheme.scss');
   }
+  return(
+    <div className="App" theme={props.theme}>
+      <Background theme={setBackgroundTheme(props)}/>
+      <Navbar />
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+    </div>
+  );
 }
 
 const Background = (props) => {
@@ -40,18 +42,24 @@ const Background = (props) => {
   )
 }
 
-const lightThemeBackgroundColors = {
+const lightTheme = {
   firstColor: '#e5d9f7',
   middleColor: '#f5f0fd',
-  lastColor: '#ffffff',
-  iconColor: '#dddddd'
+  lastColor: '#ffffff'
 }
 
-const darkThemeBackgroundColors = {
+const darkTheme = {
   firstColor: '#1c1b1c',
   middleColor: '#282829',
-  lastColor: '#4f4f54',
-  iconColor: '#dddddd'
+  lastColor: '#4f4f54'
+}
+
+const setBackgroundTheme = (props) => {
+  if (props.theme === 'darkTheme') {
+    return darkTheme;
+  } else {
+    return lightTheme;
+  }
 }
 
 export default App;

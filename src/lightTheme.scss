@@ -88,46 +88,31 @@ a {
   }
   .theme-switch {
     position: relative;
-    width: 53px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     margin-top: 60px;
     margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
       cursor: pointer;
     }
-    &:active {
-      .switch-theme-button {
-        background-image: linear-gradient(180deg, #646464 50%, #313131 100%);
-        border: 2px solid #808080;
-      }
-      .bar {
-        background-color: rgb(161, 161, 161);
-      }
-    }
-    .switch-theme-button {
-      position: absolute;
+    .theme-switch-button {
       background-image: linear-gradient(180deg, #dbdbdb 50%, #acacac 100%);
-      height: 20px;
-      width: 20px;
-      top: 0;
-      left: 0;
-      border-radius: 20px;
+      height: 16px;
+      width: 16px;
+      border-radius: 16px;
       border: 2px solid #e9e9e9;
       z-index: 2;
       &:hover {
         background-image: linear-gradient(180deg, #bdbdbd 50%, #868686 100%);
         border: 2px solid #dddddd;
       }
-    }
-    .bar {
-      background-color: rgb(82, 82, 82);
-      position: absolute;
-      height: 15px;
-      width: 50px;
-      top: 4px;
-      left: 2px;
-      border-radius: 25px;
-      z-index: 1;
+      &:active {
+        background-image: linear-gradient(180deg, #a1a1a1 50%, #7a7a7a 100%);
+        border: 2px solid #b9b9b9;
+      }
     }
   }
   .projects-button {
@@ -486,6 +471,11 @@ a {
       margin-left: 90px;
       text-shadow: 2px 2px #9196cf;
       #GitHub-button {
+        .link-image {
+          svg {
+            fill: #000000;
+          }
+        }
         &:hover {
           color: #9660cc;
         }
@@ -496,6 +486,9 @@ a {
       #resume-button {
         .link-image {
           margin-top: 7px;
+          svg {
+            fill: #000000;
+          }
         }
         &:hover {
           color: #9660cc;
@@ -506,6 +499,11 @@ a {
       }
       #LinkedIn-button {
         margin-top: 9px;
+        .link-image {
+          svg {
+            fill: #000000;
+          }
+        }
         &:hover {
           color: #9660cc;
         }

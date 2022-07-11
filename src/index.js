@@ -5,8 +5,11 @@ import App from "./App.js";
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
+const isDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
+let theme = isDark ? 'darkTheme' : 'lightTheme';
+
 root.render(
   <StrictMode>
-    <App />
+    <App theme={theme}/>
   </StrictMode>
 );
