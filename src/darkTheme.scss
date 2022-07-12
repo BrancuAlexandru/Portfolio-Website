@@ -72,6 +72,20 @@ a {
   }
 }
 
+.backToTopArrow {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 36px;
+  z-index: 3;
+  background-color: #c7c7c7;
+  box-shadow: 2px 2px #777777;
+  padding: 6px 3px 6px 9px;
+  cursor: pointer;
+}
+
 .Navbar {
   display: flex;
   flex-direction: row !important;
