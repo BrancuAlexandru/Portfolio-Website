@@ -256,29 +256,45 @@ a {
     justify-content: center;
     .about-me-skills {
       background-color: #aaaaaa;
-      margin-left: 10px;
+      margin-left: 20px;
+      border-radius: 17px;
       border-bottom: 5px solid #a203f8;
-      width: 300px;
-      .icon-parent {
-        width: 70px;
-        height: 70px;
-        svg {
-          width: 100%;
-          height: 100%;
-          -webkit-user-drag: none;
+      width: 280px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .first-half,
+      .second-half {
+        display: flex;
+        flex-direction: column;
+        .icon-parent {
+          width: 85px;
+          height: 85px;
+          display: inline-block;
+          margin-bottom: 5px;
+          svg {
+            width: 100%;
+            height: 100%;
+            -webkit-user-drag: none;
+          }
         }
+      }
+      .first-half {
+        margin: 25px 32px 10px 0;
       }
     }
     .about-me-text {
       background-color: #aaaaaa;
       border-bottom: 5px solid #a203f8;
+      border-radius: 17px;
+      display: flex;
+      align-items: center;
       .about-me-paragraph {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 15px;
-        margin-bottom: 15px;
         p {
           color: #303030;
           max-width: 575px;
@@ -462,15 +478,18 @@ a {
         height: 35px;
         margin-bottom: 20px;
         width: 380px;
+        border-radius: 5px;
       }
       .body-input {
         width: 493px;
         padding-top: 8px;
         height: 212px;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
         resize: none;
+        border-radius: 5px;
       }
       #submit-button {
+        border-radius: 5px;
         background-color: #6d13c2;
         color: #f7f8ff;
         width: 100%;

@@ -8,16 +8,20 @@ const About = () => {
         <div className="about-me-text">
           <div className="about-me-paragraph">
             <p>I want to make useful products and amazing services that can help people globally.</p>
-            <p>The software and web industries touch the lives of everyone, which is why it's my choice as a career.</p>
+            <p>I've contributed to open source projects and love to be part of a team.</p>
           </div>
         </div>
         <div className="about-me-skills">
-          <SassIcon />
-          <ReactIcon />
-          <GitIcon />
-          <FirebaseIcon />
-          <WebpackIcon />
-          <JavascriptIcon />
+          <div className="first-half">
+            <SassIcon />
+            <ReactIcon />
+            <GitIcon />
+          </div>
+          <div className="second-half">
+            <JavascriptIcon />
+            <WebpackIcon />
+            <FirebaseIcon />
+          </div>
         </div>
       </div>
     </section>
