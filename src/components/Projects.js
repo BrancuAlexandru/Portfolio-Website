@@ -1,4 +1,9 @@
 import React from 'react';
+import ProjectMenu from './ProjectMenu'
+
+const renderProjectMenu = (id) => {
+  return <ProjectMenu id={id}/>
+}
 
 const Projects = () => {
   return (
@@ -8,17 +13,17 @@ const Projects = () => {
         <Squares />
         <div className="projects-content">
           <div className="blank-project-right"></div>
-          <div className="project cta">
+          <div className="project cta" onClick={() => renderProjectMenu(0)}>
             <div className="project-image">
               <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
             </div>
           </div>
-          <div className="project cta">
+          <div className="project cta" onClick={() => renderProjectMenu(1)}>
             <div className="project-image">
               <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
             </div>
           </div>
-          <div className="project cta">
+          <div className="project cta" onClick={() => renderProjectMenu(2)}>
             <div className="project-image">
               <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
             </div>

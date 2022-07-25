@@ -72,7 +72,7 @@ a {
   }
 }
 
-.backToTopArrow {
+.back-to-top-arrow {
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -315,9 +315,10 @@ a {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  margin-top: 50px;
   h1 {
     position: relative;
-    left: 13.5%;
+    left: 17.2%;
     color: #8536ec;
     font-weight: 500;
     font-size: 70px;
@@ -445,12 +446,14 @@ a {
 }
 
 .Contact {
+  margin-top: 50px;
   h1 {
     position: relative;
     color: #8536ec;
     font-weight: 500;
     font-size: 70px;
-    margin: 120px 0 30px 65px; 
+    left: 13%;
+    margin: 120px 0 30px 0; 
   }
   .contact-content {
     display: flex;
