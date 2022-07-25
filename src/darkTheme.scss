@@ -80,10 +80,21 @@ a {
   height: 50px;
   border-radius: 36px;
   z-index: 3;
-  background-color: #c7c7c7;
-  box-shadow: 2px 2px #777777;
+  background-color: #a3a3a3;
+  box-shadow: 2px 2px #7e7e7e;
   padding: 6px 3px 6px 9px;
   cursor: pointer;
+  &:hover {
+    background-color: #a8a8a8;
+    box-shadow: 2px 2px #8a8a8a;
+  }
+  &:active {
+    background-color: #868686;
+    box-shadow: 2px 2px #616161;
+  }
+  svg {
+    fill: #ffffff;
+  }
 }
 
 .Navbar {
