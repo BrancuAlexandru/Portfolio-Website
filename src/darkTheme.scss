@@ -45,11 +45,11 @@ a {
 
 .section-title {
   width: 100%;
-  color: #8536ec;
+  color: #a8a8a8;
   font-weight: 500;
   font-size: 70px;
   margin: 120px 0 30px 130px;
-  text-shadow: 4px 4px #c9b8d4;
+  text-shadow: 3px 3px #000000;
   &:hover {
     cursor: default;
   }
@@ -80,20 +80,23 @@ a {
   height: 50px;
   border-radius: 36px;
   z-index: 3;
-  background-color: #a3a3a3;
-  box-shadow: 2px 2px #7e7e7e;
+  background-color: #aaaaaa;
+  box-shadow: 2px 2px #000000;
   padding: 6px 3px 6px 9px;
   cursor: pointer;
+  svg {
+    fill: #a203f8;
+  }
   &:hover {
-    background-color: #a8a8a8;
-    box-shadow: 2px 2px #8a8a8a;
+    background-color: #bdbdbd;
+    box-shadow: 2px 2px #474747;
+    svg {
+      fill: #b737fc;
+    }
   }
   &:active {
     background-color: #868686;
     box-shadow: 2px 2px #616161;
-  }
-  svg {
-    fill: #ffffff;
   }
 }
 
@@ -105,12 +108,12 @@ a {
   z-index: 1;
   .name {
     margin: 40px 275px 75px 0;
-    color: #a74cf1;
+    color: #dadada;
     font-family: 'Courier New';
     font-weight: 500;
     font-size: 48px;
     user-select: text;
-    text-shadow: 1px 1px #d39dff;
+    text-shadow: 1px 1px #797979;
   }
   .theme-switch {
     position: relative;
@@ -144,23 +147,23 @@ a {
   .projects-button {
     margin-top: 54px;
     margin-right: 16px;
-    color: #8a42e7;
+    color: #dadada;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 28px;
-    text-shadow: 1px 1px #c1a4db;
+    text-shadow: 1px 1px #474747;
     &:hover {
-      color: #682aaf;
+      color: #8239c5;
     }
     &:active {
-      color: #3a0b70;
+      color: #6523a3;
     }
   }
   .contact-button {
     margin-top: 50px;
     margin-left: 16px;
-    background-color: #6d13c2;
-    color: #f7f8ff;
+    background-color: #353535;
+    color: #dadada;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 25px;
@@ -169,8 +172,8 @@ a {
     max-height: 28px;
     display: flex;
     align-items: center;
-    text-shadow: 2px 1px #4e2f86;
-    box-shadow: 3px 3px #211161;
+    text-shadow: 2px 1px #474747;
+    box-shadow: 3px 3px #a203f8;
     &:hover {
       background-color: #8239c5;
       color: #ffffff;
@@ -197,19 +200,19 @@ a {
       margin-top: 80px;
       margin-left: 90px;
       h2 {
-        color: #efdeff;
+        color: #adadad;
         max-width: 445px;
         font-weight: 400;
         font-size: 40px;
-        text-shadow: 3px 2px #3f2d8a;
+        text-shadow: 3px 2px #424242;
         &:hover {
           cursor: default;
         }
       }
       a {
         text-align: center;
-        background-color: #f8f0ff;
-        color: #6904c7;
+        background-color: #353535;
+        color: #dfdfdf;
         padding: 7px 10px;
         max-width: 160px;
         border-radius: 10px;
@@ -218,17 +221,17 @@ a {
         font-family: 'Poppins', sans-serif;
         font-weight: 500;
         font-size: 25px;
-        box-shadow: 4px 4px #211161;
+        box-shadow: 4px 4px #a203f8;
       }
       #show-me-button {
         text-shadow: 1px 1px #b1a7bb;
         &:hover {
-          background-color: #ffffff;
-          color: #731bc5;
+          background-color: #7431b3;
+          color: #ffffff;
         }
         &:active {
-          color: #550f97;
-          background-color: #d9cde0;
+          color: #ffffff;
+          background-color: #5d2196;
         }
       }
     }
@@ -255,7 +258,7 @@ a {
     flex-direction: row;
     justify-content: center;
     .about-me-skills {
-      background-color: #aaaaaa;
+      background-color: #2c2c2c;
       margin-left: 20px;
       border-radius: 17px;
       border-bottom: 5px solid #a203f8;
@@ -285,7 +288,7 @@ a {
       }
     }
     .about-me-text {
-      background-color: #aaaaaa;
+      background-color: #2c2c2c;
       border-bottom: 5px solid #a203f8;
       border-radius: 17px;
       display: flex;
@@ -296,12 +299,12 @@ a {
         align-items: center;
         flex-direction: column;
         p {
-          color: #303030;
+          color: #dfdfdf;
           max-width: 575px;
           padding: 15px 50px 15px 30px;
           font-weight: 500;
           font-size: 28px;
-          text-shadow: 1px 1px #ad8fc7;
+          text-shadow: 2px 2px #252525;
           &:hover {
             cursor: default;
           }
@@ -319,11 +322,11 @@ a {
   h1 {
     position: relative;
     left: 17.2%;
-    color: #8536ec;
+    color: #a8a8a8;
     font-weight: 500;
     font-size: 70px;
     margin: 120px 0 30px 130px;
-    text-shadow: 4px 4px #c9b8d4;
+    text-shadow: 3px 3px #000000;
     &:hover {
       cursor: default;
       user-select: none;
@@ -449,7 +452,7 @@ a {
   margin-top: 50px;
   h1 {
     position: relative;
-    color: #8536ec;
+    color: #a8a8a8;
     font-weight: 500;
     font-size: 70px;
     left: 13%;
@@ -464,7 +467,8 @@ a {
       display: flex;
       flex-direction: column;
       .text-input {
-        background-color: #aaaaaa;
+        color: #dfdfdf;
+        background-color: #2c2c2c;
         border-bottom: 5px solid #a203f8;
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
@@ -474,7 +478,7 @@ a {
           outline: none;
         }
         &::placeholder {
-          color: #dfdfdf;
+          color: #acacac;
         }
       }
       .name-input {
@@ -493,7 +497,7 @@ a {
       }
       #submit-button {
         border-radius: 5px;
-        background-color: #6d13c2;
+        background-color: #353535;
         color: #f7f8ff;
         width: 100%;
         height: 40px;
@@ -502,8 +506,9 @@ a {
         font-weight: 600;
         font-size: 22px;
         text-shadow: 2px 1px #4e2f86;
+        box-shadow: 3px 3px #a203f8;
         &:hover {
-          background-color: #8239c5;
+          background-color: #424242;
           color: #ffffff;
         }
         &:active {
@@ -517,7 +522,7 @@ a {
       flex-direction: column;
       margin-top: 20px;
       margin-left: 90px;
-      text-shadow: 2px 2px #4c058f;
+      text-shadow: 2px 2px #a203f8;
       #GitHub-button {
         .link-image {
           svg {
@@ -525,7 +530,7 @@ a {
           }
         }
         &:hover {
-          color: #9660cc;
+          color: #dfdfdf;
         }
         &:active {
           color: #51009c;
@@ -539,7 +544,7 @@ a {
           }
         }
         &:hover {
-          color: #9660cc;
+          color: #dfdfdf;
         }
         &:active {
           color: #51009c;
@@ -553,7 +558,7 @@ a {
           }
         }
         &:hover {
-          color: #9660cc;
+          color: #dfdfdf;
         }
         &:active {
           color: #51009c;
@@ -563,7 +568,7 @@ a {
         display: flex;
         flex-direction: row;
         align-items: center;
-        color: #8834d6;
+        color: #acacac;
         img {
           -webkit-user-drag: none;
         }
@@ -614,4 +619,17 @@ a {
     border-radius: 5px;
     background: #555555;
   }
+}
+
+.project-menu-left-arrow,
+.project-menu-right-arrow {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  background-color: #aaaaaa;
+  box-shadow: 2px 2px #000000;
+  cursor: pointer;
 }
