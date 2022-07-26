@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
 import ProjectMenu from './ProjectMenu'
 
 const Projects = () => {
   const [id, setId] = useState();
   const [menuIsActive, setMenuIsActive] = useState(false);
-  const closeMenu = () => {
-    setMenuIsActive(false);
-  }
   return (
     <section className="Projects" id="Projects">
       <h1>Projects</h1>
@@ -44,7 +40,7 @@ const Projects = () => {
         <Squares />
         <div className="film-backside"></div>
       </div>
-      {menuIsActive && <ProjectMenu id={id} closeMenu={closeMenu}/>}
+      {menuIsActive && <ProjectMenu id={id}/>}
     </section>
   );
 }
