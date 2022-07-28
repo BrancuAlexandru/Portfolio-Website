@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import ProjectMenu from './ProjectMenu'
+import ProjectMenu from './carousel/ProjectMenu'
 
 const Projects = () => {
-  const [id, setId] = useState();
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState();
   const [menuIsActive, setMenuIsActive] = useState(false);
   return (
     <section className="Projects" id="Projects">
@@ -12,23 +12,24 @@ const Projects = () => {
         <div className="projects-content">
           <div className="blank-project-right"></div>
           <div className="project cta" onClick={() => {
-            setId(0);
+            setSelectedProjectIndex(0);
             setMenuIsActive(true);
+            // also set ProjectMenu's projectMenuIsOpen to true
             }}>
             <div className="project-image">
               <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
             </div>
           </div>
           <div className="project cta" onClick={() => {
-            setId(1);
+            setSelectedProjectIndex(1);
             setMenuIsActive(true);
             }}>
             <div className="project-image">
-              <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
+              <img src="./images/landingPage.webp" alt="screenshot of the portfolio" style={{objectFit: 'cover', objectPosition: '0 0'}}/>
             </div>
           </div>
           <div className="project cta" onClick={() => {
-            setId(2);
+            setSelectedProjectIndex(2);
             setMenuIsActive(true);
             }}>
             <div className="project-image">
@@ -40,7 +41,7 @@ const Projects = () => {
         <Squares />
         <div className="film-backside"></div>
       </div>
-      {menuIsActive && <ProjectMenu id={id}/>}
+      {menuIsActive && <ProjectMenu selectedProjectIndex={selectedProjectIndex}/>}
     </section>
   );
 }

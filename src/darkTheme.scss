@@ -253,6 +253,7 @@ a {
 }
 
 .About {
+  margin-top: 60px;
   .about-me-content {
     display: flex;
     flex-direction: row;
@@ -318,7 +319,7 @@ a {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  margin-top: 50px;
+  margin-top: 20px;
   h1 {
     position: relative;
     left: 17.2%;
@@ -446,10 +447,200 @@ a {
       z-index: 2;
     }
   }
+  .project-menu {
+    height: 600px;
+    width: 1200px;
+    background-color: #efefef;
+    position: absolute;
+    z-index: 4;
+    top: 184%;
+    left: 10.88%;
+    border-radius: 20px;
+    .project-menu-top {
+      width: 100%;
+      height: 10%;
+      top: 0;
+      left: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .project-menu-section-button {
+        a {
+          margin-right: 20px;
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+      .close-menu-button {
+        position: absolute;
+        right: 13px;
+        top: 2px;
+        cursor: pointer;
+      }
+    }
+    .project-menu-left-arrow {
+      position: fixed;
+      height: 35px;
+      width: 35px;
+      left: 12%;
+      top: 50%;
+      transform: rotate(-90deg);
+      cursor: pointer;
+    }
+    .project-menu-right-arrow {
+      position: fixed;
+      height: 35px;
+      width: 35px;
+      right: 12%;
+      top: 50%;
+      transform: rotate(90deg);
+      cursor: pointer;
+    }
+    .project-menu-section {
+      position: absolute;
+      z-index: 4;
+      left: 12.2%;
+      bottom: 11%;
+      .project-menu-photos-section {
+        position: relative;
+        z-index: 5;
+        width: 900px;
+        height: 450px;
+        .photos-section-image {
+          display: flex;
+          flex-direction: column;
+          left: 16%;
+          top: 13%;
+          height: 300px;
+          position: absolute;
+          img {
+            max-width: 180px;
+            max-height: 400px;
+          }
+          p {
+            position: relative;
+            left: 170%;
+          }
+          .left-arrow {
+            position: fixed;
+            height: 20px;
+            width: 20px;
+            left: 23%;
+            top: 50%;
+            transform: rotate(-90deg);
+            cursor: pointer;
+          }
+          .right-arrow {
+            position: fixed;
+            height: 20px;
+            width: 20px;
+            right: 23%;
+            top: 50%;
+            transform: rotate(90deg);
+            cursor: pointer;
+          }
+        }
+        .photos-section-text {
+          display: flex;
+          flex-direction: column;
+          right: 14%;
+          top: 10%;
+          position: absolute;
+          h2 {
+
+          }
+          p {
+
+          }
+        }
+      }
+      .project-menu-technology-section {
+        position: relative;
+        z-index: 5;
+        width: 900px;
+        height: 450px;
+        .technology-top {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 20%;
+          p {
+            margin: 20px 0;
+          }
+        }
+        .technology-bottom {
+          position: absolute;
+          max-width: 200px;
+          max-height: 400px;
+          bottom: 10%;
+          left: 38.5%;
+          display: flex;
+          justify-content: center;
+          h3 {
+            position: relative;
+            margin: 5px;
+          }
+        }
+      }
+      .project-menu-case-study-section {
+        position: relative;
+        z-index: 5;
+        width: 900px;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p {
+          margin-top: 15%;
+        }
+        .case-study-challenge {
+          h2 {
+            margin: 5px;
+          }
+          p {
+            margin: 20px;
+            margin-top: 0;
+          }
+        }
+        .case-study-solution {
+          h2 {
+            margin: 5px;
+          }
+          p {
+            margin: 20px;
+            margin-top: 0;
+          }
+        }
+        .left-arrow {
+          position: fixed;
+          height: 20px;
+          width: 20px;
+          left: 23%;
+          top: 50%;
+          transform: rotate(-90deg);
+          cursor: pointer;
+        }
+        .right-arrow {
+          position: fixed;
+          height: 20px;
+          width: 20px;
+          right: 23%;
+          top: 50%;
+          transform: rotate(90deg);
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 .Contact {
-  margin-top: 50px;
+  margin-top: 90px;
   h1 {
     position: relative;
     color: #a8a8a8;
@@ -531,9 +722,15 @@ a {
         }
         &:hover {
           color: #dfdfdf;
+          svg {
+            fill: #fefefe;
+          }
         }
         &:active {
           color: #51009c;
+          svg {
+            fill: #dcb6ff;
+          }
         }
       }
       #resume-button {
@@ -544,10 +741,16 @@ a {
           }
         }
         &:hover {
-          color: #dfdfdf;
+          color: #fefefe;
+          svg {
+            fill: #dddddd;
+          }
         }
         &:active {
           color: #51009c;
+          svg {
+            fill: #dcb6ff;
+          }
         }
       }
       #LinkedIn-button {
@@ -559,9 +762,15 @@ a {
         }
         &:hover {
           color: #dfdfdf;
+          svg {
+            fill: #fefefe;
+          }
         }
         &:active {
           color: #51009c;
+          svg {
+            fill: #dcb6ff;
+          }
         }
       }
       a {
@@ -619,17 +828,4 @@ a {
     border-radius: 5px;
     background: #555555;
   }
-}
-
-.project-menu-left-arrow,
-.project-menu-right-arrow {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 50px;
-  height: 50px;
-  z-index: 3;
-  background-color: #aaaaaa;
-  box-shadow: 2px 2px #000000;
-  cursor: pointer;
 }
