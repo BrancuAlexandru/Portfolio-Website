@@ -17,8 +17,10 @@ const ProjectMenu = (props) => {
           <a className="close-menu-button" onClick={() => setProjectMenuIsOpen(false)}>x</a>
         </div>
         <a className="project-menu-left-arrow" onClick={() => {
-            if (activeSection > 1) {
-              setActiveSection(activeSection--);
+            if (activeSection > 0) {
+              setActiveSection(activeSection - 1);
+            } else {
+              setActiveSection(2);
             }
             }}>
           <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 380 380">
@@ -26,11 +28,13 @@ const ProjectMenu = (props) => {
           </svg>
         </a>
         <div className="project-menu-section">
-          <ProjectMenuSection id={props.id} activeSection={activeSection}/>
+          <ProjectMenuSection selectedProjectIndex={props.selectedProjectIndex} activeSection={activeSection}/>
         </div>
         <a className="project-menu-right-arrow" onClick={() => {
-            if (activeSection > 1) {
-              setActiveSection(activeSection--);
+            if (activeSection < 2) {
+              setActiveSection(activeSection + 1);
+            } else {
+              setActiveSection(0);
             }
             }}>
           <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 380 380">
