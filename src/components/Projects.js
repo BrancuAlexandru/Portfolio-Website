@@ -4,6 +4,9 @@ import ProjectMenu from './carousel/ProjectMenu'
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState();
   const [menuIsActive, setMenuIsActive] = useState(false);
+  const toggleMenu = () => {
+    setMenuIsActive(!menuIsActive)
+  }
   return (
     <section className="Projects" id="Projects">
       <h1>Projects</h1>
@@ -14,7 +17,6 @@ const Projects = () => {
           <div className="project cta" onClick={() => {
             setSelectedProjectIndex(0);
             setMenuIsActive(true);
-            // also set ProjectMenu's projectMenuIsOpen to true
             }}>
             <div className="project-image">
               <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
@@ -41,7 +43,7 @@ const Projects = () => {
         <Squares />
         <div className="film-backside"></div>
       </div>
-      {menuIsActive && <ProjectMenu selectedProjectIndex={selectedProjectIndex}/>}
+      <ProjectMenu selectedProjectIndex={selectedProjectIndex} menuIsActive={menuIsActive} toggleMenu={toggleMenu}/>
     </section>
   );
 }
