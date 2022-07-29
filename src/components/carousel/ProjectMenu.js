@@ -3,10 +3,9 @@ import ProjectMenuSection from './ProjectMenuSection';
 
 const ProjectMenu = (props) => {
   const [activeSection, setActiveSection] = useState(0);
-  const [projectMenuIsOpen, setProjectMenuIsOpen] = useState(true);
   return (
     <div>
-      {projectMenuIsOpen &&
+      {props.menuIsActive &&
       <div className="project-menu">
         <div className="project-menu-top">
           <div className="project-menu-section-button cta">
@@ -14,7 +13,7 @@ const ProjectMenu = (props) => {
             <a onClick={() => setActiveSection(1)}>Technology</a>
             <a onClick={() => setActiveSection(2)}>Case Study</a>
           </div>
-          <a className="close-menu-button" onClick={() => setProjectMenuIsOpen(false)}>x</a>
+          <a className="close-menu-button" onClick={() => props.toggleMenu()}>x</a>
         </div>
         <a className="project-menu-left-arrow" onClick={() => {
             if (activeSection > 0) {
