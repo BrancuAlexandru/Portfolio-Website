@@ -27,6 +27,10 @@ const CaseStudySection = (props) => {
           <h2>Solution</h2>
             <p>{currentPageData.solution}</p>
         </div>
+        <div className="case-study-learned">
+          <h2>What I learned</h2>
+            <p>{currentPageData.learned}</p>
+        </div>
         <a className="right-arrow" onClick={() => {
           if (currentPageNumber > 0) {
             setCurrentPageNumber(currentPageNumber - 1);
@@ -39,9 +43,29 @@ const CaseStudySection = (props) => {
           </svg>
         </a>
         <div className="page-number">
-          <p>{`${currentPageNumber + 1}/${highestPageIndex + 1}`}</p>
+          {projectsData[props.selectedProjectIndex].caseStudy.pages.map((item, id) => {
+            return (
+              <Bubble key={id} id={id} currentPageNumber={currentPageNumber}/>
+            )
+          })}
         </div>
       </div>
+    </div>
+  )
+}
+
+const Bubble = (props) => {
+  let defaultColor = "#a5a5a5";
+  let activeColor = "#a203f8";
+  let id = props.id;
+  return (
+    <div className="bubble-parent">
+      {id === props.currentPageNumber && 
+        <div className="case-study-bubble" id={props.id} style={{backgroundColor: activeColor, width: "9px", height: "9px"}}></div>
+      }
+      {id != props.currentPageNumber && 
+        <div className="case-study-bubble" id={props.id} style={{backgroundColor: defaultColor}}></div>
+      }
     </div>
   )
 }

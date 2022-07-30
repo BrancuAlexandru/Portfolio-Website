@@ -57,10 +57,10 @@ const Bubble = (props) => {
   return (
     <div className="bubble-parent">
       {id === props.currentPageNumber && 
-        <div className="bubble" id={props.id} style={{backgroundColor: activeColor, width: "9px", height: "9px"}}></div>
+        <div className="photos-bubble" id={props.id} style={{backgroundColor: activeColor, width: "9px", height: "9px"}}></div>
       }
       {id != props.currentPageNumber && 
-        <div className="bubble" id={props.id} style={{backgroundColor: defaultColor}}></div>
+        <div className="photos-bubble" id={props.id} style={{backgroundColor: defaultColor}}></div>
       }
     </div>
   )
