@@ -3,17 +3,46 @@ import ProjectMenuSection from './ProjectMenuSection';
 
 const ProjectMenu = (props) => {
   const [activeSection, setActiveSection] = useState(0);
+  const [colors, setColors] = useState({
+    photos: "#a203f8",
+    technology: "white",
+    caseStudy: "white"
+  });
   return (
     <div>
       {props.menuIsActive &&
       <div className="project-menu">
         <div className="project-menu-top">
           <div className="project-menu-section-button cta">
-            <a onClick={() => setActiveSection(0)}>Photos</a>
-            <a onClick={() => setActiveSection(1)}>Technology</a>
-            <a onClick={() => setActiveSection(2)}>Case Study</a>
+            <a onClick={() => {
+              setActiveSection(0);
+              setColors({
+                photos: "#a203f8",
+                technology: "white",
+                caseStudy: "white"
+              })
+            }}
+              style={{color: colors.photos}}>Photos</a>
+            <a onClick={() => {
+              setActiveSection(1);
+              setColors({
+                photos: "white",
+                technology: "#a203f8",
+                caseStudy: "white"
+              })
+            }}
+              style={{color: colors.technology}}>Technology</a>
+            <a onClick={() => {
+              setActiveSection(2);
+              setColors({
+                photos: "white",
+                technology: "white",
+                caseStudy: "#a203f8"
+              })
+            }}
+              style={{color: colors.caseStudy}}>Case Study</a>
           </div>
-          <a className="close-menu-button" onClick={() => props.toggleMenu()}>x</a>
+          <a className="close-menu-button" onClick={() => props.toggleMenu()}></a>
         </div>
         <a className="project-menu-left-arrow" onClick={() => {
             if (activeSection > 0) {

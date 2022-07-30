@@ -3,36 +3,24 @@ const projectsData = [
     photos: {
       pages: [
         {
-          imageSrc: './images/landingPage.webp',
-          title: 'Landing Page',
-          body: 'This is the landing page.'
-        },
-        {
-          imageSrc: './images/design.webp',
-          title: 'Portfolio Design',
-          body: 'This is the design.'
+          imageSrc: './',
+          title: '',
+          body: '',
+          madeIn: ''
         }
-      ],
-      highestPageIndex: 1
+      ]
     },
     technology: {
-      body: 'These are the technologies I used',
-      skills: [
-        ''
-      ]
+      body: '',
+      skills: []
     },
     caseStudy: {
       pages: [
         {
-          challenge: 'This is a challenge I faced.',
-          solution: 'This is the solution I came up with.'
-        },
-        {
-          challenge: 'This is another challenge I faced.',
-          solution: 'This is the solution I came up with.'
+          challenge: '',
+          solution: ''
         }
-      ],
-      highestPageIndex: 1
+      ]
     }
   },
   {
@@ -41,15 +29,22 @@ const projectsData = [
         {
           imageSrc: './images/landingPage.webp',
           title: 'Landing Page',
-          body: 'This is the landing page.'
+          body: "This is the landing page, built after the design. It deviates from the design in a lot of ways, but the design was meant to be flexible and improved upon.",
+          madeIn: 'Made in Photoshop.'
         },
         {
-          imageSrc: './images/design.webp',
-          title: 'Portfolio Design',
-          body: 'This is the design.'
+          imageSrc: './images/initialDesign.webp',
+          title: 'Initial Design',
+          body: 'This is the initial design I drew for this portfolio website. It had very few iterations as I mostly knew what I wanted from the beginning.',
+          madeIn: 'Made in Photoshop.'
+        },
+        {
+          imageSrc: './images/finalDesign.webp',
+          title: 'Final Design',
+          body: 'This is the final design I arrived at after many iterations. The hardest part was deciding the color theme.',
+          madeIn: 'Made in Photoshop.'
         }
-      ],
-      highestPageIndex: 1
+      ]
     },
     technology: {
       body: 'These are the technologies I used',
@@ -74,44 +69,31 @@ const projectsData = [
           challenge: 'This is another challenge I faced.',
           solution: 'This is the solution I came up with.'
         }
-      ],
-      highestPageIndex: 1
+      ]
     }
   },
   {
     photos: {
       pages: [
         {
-          imageSrc: './images/landingPage.webp',
-          title: 'Landing Page',
-          body: 'This is the landing page.'
-        },
-        {
-          imageSrc: './images/design.webp',
-          title: 'Portfolio Design',
-          body: 'This is the design.'
+          imageSrc: './',
+          title: '',
+          body: '',
+          madeIn: ''
         }
-      ],
-      highestPageIndex: 1
+      ]
     },
     technology: {
-      body: 'These are the technologies I used',
-      skills: [
-        ''
-      ]
+      body: '',
+      skills: []
     },
     caseStudy: {
       pages: [
         {
-          challenge: 'This is a challenge I faced.',
-          solution: 'This is the solution I came up with.'
-        },
-        {
-          challenge: 'This is another challenge I faced.',
-          solution: 'This is the solution I came up with.'
+          challenge: '',
+          solution: ''
         }
-      ],
-      highestPageIndex: 1
+      ]
     }
   }
 ];
