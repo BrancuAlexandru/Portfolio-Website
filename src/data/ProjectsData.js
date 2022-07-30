@@ -63,12 +63,14 @@ const projectsData = [
     caseStudy: {
       pages: [
         {
-          challenge: 'This is a challenge I faced.',
-          solution: 'This is the solution I came up with.'
+          challenge: 'Changing child component state from parent',
+          solution: "Passing a function and the state it changes into the child's props",
+          learned: "How to make a parent and child components interact, I also now have a better understanding of React's data flow"
         },
         {
-          challenge: 'This is another challenge I faced.',
-          solution: 'This is the solution I came up with.'
+          challenge: 'Working with .svg files and inline svg',
+          solution: 'Practicing with many SVGs, using viewport and viewbox',
+          learned: 'Inline svg is better than svg in file form because it can easily be edited'
         }
       ]
     }
