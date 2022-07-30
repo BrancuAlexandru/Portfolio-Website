@@ -47,7 +47,7 @@ const projectsData = [
       ]
     },
     technology: {
-      body: 'These are the technologies I used',
+      body: 'I designed this website in Photoshop, made all of it through Jsx in React functional components and used CSS to style it. I used Firebase for hosting and the contact form, Git and Github for version control and I configured Webpack for bundling.',
       skills: [
         'React',
         'JavaScript',
@@ -56,7 +56,8 @@ const projectsData = [
         'Firebase',
         'Git',
         'npm',
-        'Webpack'
+        'Webpack',
+        'Photoshop'
       ]
     },
     caseStudy: {
