@@ -4,10 +4,31 @@ import ProjectMenuSection from './ProjectMenuSection';
 const ProjectMenu = (props) => {
   const [activeSection, setActiveSection] = useState(0);
   const [colors, setColors] = useState({
-    photos: "#a203f8",
+    photos: "#9d6df7",
     technology: "white",
     caseStudy: "white"
   });
+  const changeColor = (section) => {
+    if (section === 2) {
+      setColors({
+        photos: "white",
+        technology: "white",
+        caseStudy: "#9d6df7"
+      })
+    } else if (section === 1) {
+      setColors({
+        photos: "white",
+        technology: "#9d6df7",
+        caseStudy: "white"
+      })
+    } else {
+      setColors({
+        photos: "#9d6df7",
+        technology: "white",
+        caseStudy: "white"
+      })
+    }
+  }
   return (
     <div>
       {props.menuIsActive &&
@@ -17,40 +38,57 @@ const ProjectMenu = (props) => {
             <a onClick={() => {
               setActiveSection(0);
               setColors({
-                photos: "#a203f8",
+                photos: "#9d6df7",
                 technology: "white",
                 caseStudy: "white"
               })
             }}
-              style={{color: colors.photos}}>Photos</a>
+            style={{color: colors.photos}}
+            >
+              Photos
+            </a>
             <a onClick={() => {
               setActiveSection(1);
               setColors({
                 photos: "white",
-                technology: "#a203f8",
+                technology: "#9d6df7",
                 caseStudy: "white"
               })
             }}
-              style={{color: colors.technology}}>Technology</a>
+            style={{color: colors.technology}}
+            >
+              Technology
+            </a>
             <a onClick={() => {
               setActiveSection(2);
               setColors({
                 photos: "white",
                 technology: "white",
-                caseStudy: "#a203f8"
+                caseStudy: "#9d6df7"
               })
             }}
-              style={{color: colors.caseStudy}}>Case Study</a>
+            style={{color: colors.caseStudy}}
+            >
+              Case Study
+            </a>
           </div>
-          <a className="close-menu-button" onClick={() => props.toggleMenu()}></a>
+          <a className="close-menu-button" onClick={() => {
+            props.toggleMenu();
+            setActiveSection(0);
+            changeColor(0);
+          }}>
+          </a>
         </div>
         <a className="project-menu-left-arrow" onClick={() => {
-            if (activeSection > 0) {
-              setActiveSection(activeSection - 1);
-            } else {
-              setActiveSection(2);
-            }
-            }}>
+          if (activeSection > 0) {
+            setActiveSection(activeSection - 1);
+            changeColor(activeSection - 1);
+          } else {
+            setActiveSection(2);
+            changeColor(2);
+          }
+          }}
+        >
           <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 380 380">
             <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
           </svg>
@@ -59,12 +97,15 @@ const ProjectMenu = (props) => {
           <ProjectMenuSection selectedProjectIndex={props.selectedProjectIndex} activeSection={activeSection}/>
         </div>
         <a className="project-menu-right-arrow" onClick={() => {
-            if (activeSection < 2) {
-              setActiveSection(activeSection + 1);
-            } else {
-              setActiveSection(0);
-            }
-            }}>
+          if (activeSection < 2) {
+            setActiveSection(activeSection + 1);
+            changeColor(activeSection + 1);
+          } else {
+            setActiveSection(0);
+            changeColor(0);
+          }
+          }}
+        >
           <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 380 380">
             <path id="XMLID_224_" d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
           </svg>

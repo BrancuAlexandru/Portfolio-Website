@@ -346,10 +346,13 @@ a {
         z-index: 2;
         transform: scale(1);
         transition: .2s transform ease;
+        border-top: 5px solid #2b2b2b;
+        border-bottom: 5px solid #2b2b2b;
         &:hover {
           transform: scale(1.1);
           transition: .2s ease;
-          transition-property: transform, opacity;
+          transition-property: transform, opacity, border-bottom;
+          border-bottom: 5px solid #753ce0;
         }
         .project-image {
           width: 370px;
@@ -369,12 +372,11 @@ a {
           }
           &:hover::after {
             opacity: 0.1;
-            transform: scale(1.1);
             transition: .2s ease;
             transition-property: transform, opacity;
           }
           &:active::after {
-            opacity: 0.35;
+            opacity: 0;
           }
           img {
             width: 100%;
@@ -384,14 +386,14 @@ a {
         }
       }
       .blank-project-left {
-        margin-left: 20px;
+        margin: auto 0 auto 20px;
         z-index: 2;
         width: 90px;
         height: 215px;
         background-color: #212121;
       }
       .blank-project-right {
-        margin-right: 20px;
+        margin: auto 20px auto 0;
         z-index: 2;
         width: 90px;
         height: 215px;
@@ -409,14 +411,14 @@ a {
       z-index: -1;
     }
   }
-  .Squares {
+  .TopSquares,
+  .BottomSquares {
     display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
     flex-direction: row;
     background-color: #2b2b2b;
-    height: 60px;
+    height: 55px;
     width: 100%;
     z-index: 2;
     .Square {
@@ -447,6 +449,12 @@ a {
       z-index: 2;
     }
   }
+  .TopSquares {
+    padding-top: 5px;
+  }
+  .BottomSquares {
+    padding-bottom: 5px;
+  }
   .project-menu {
     height: 600px;
     width: 1200px;
@@ -470,6 +478,7 @@ a {
           margin: 0 25px;
           font-weight: 500;
           font-size: 20px;
+          text-shadow: 2px 2px #212121;
           cursor: pointer;
           &:hover {
             text-decoration: underline;
@@ -527,7 +536,7 @@ a {
       .project-menu-photos-section {
         position: relative;
         z-index: 5;
-        width: 565px;
+        width: 915px;
         height: 480px;
         .page-content {
           display: flex;
@@ -559,6 +568,7 @@ a {
             background-color: #232323;
             height: 480px;
             width: 550px;
+            animation: fadeInFromBottomAnimation .4s ease;
             img {
               max-height: 480px;
               object-fit: contain;
@@ -587,73 +597,99 @@ a {
           .photos-section-text {
             display: flex;
             flex-direction: column;
-            left: 100%;
+            right: 0;
             top: 0;
             position: absolute;
             background-color: #444444;
             width: 340px;
             height: 480px;
             border-left: 5px solid #6f39d4;
+            animation: fadeInFromBottomAnimation .4s ease;
             h2 {
               color: white;
               margin: 35px 0 15px 20px;
+              text-shadow: 2px 2px #212121;
             }
             .body-text {
               color: white;
               margin-left: 20px;
+              text-shadow: 2px 2px #212121;
             }
             .made-in-text {
               color: white;
               font-weight: 600;
               margin-left: 20px;
               margin-top: 30px;
+              text-shadow: 1px 1px #753ce0;
             }
           }
         }
       }
       .project-menu-technology-section {
-        position: relative;
-        z-index: 5;
-        width: 900px;
-        height: 450px;
         background-color: #2c2c2c;
-        .technology-top {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          top: 20%;
-          p {
-            margin: 20px 0;
-            color: white;
-          }
-        }
-        .technology-bottom {
+        z-index: 5;
+        width: 915px;
+        height: 480px;
+        .technology-wrapper {
           position: absolute;
-          max-width: 200px;
-          max-height: 400px;
-          bottom: 10%;
-          left: 38.5%;
+          animation: fadeInFromBottomAnimation .4s ease;
+          z-index: 5;
+          width: 915px;
+          height: 480px;
           display: flex;
           justify-content: center;
-          h3 {
-            position: relative;
-            margin: 5px;
-            color: white;
+          align-items: center;
+          flex-direction: row;
+          .technology-top {
+            width: 290px;
+            height: 280px;
+            display: flex;
+            margin-right: 15px;
+            border-right: 5px solid #6f39d4;
+            p {
+              display: inline-block;
+              margin: 20px 0;
+              color: white;
+              text-align: right;
+              margin-right: 21px;
+              text-shadow: 2px 2px #212121;
+            }
+          }
+          .technology-bottom {
+            width: 273px;
+            display: flex;
+            align-items: center;
+            .skills-wrapper {
+              width: 273px;
+              height: 160px;
+              text-align: left;
+              .technology-skill {
+                display: inline-block;
+                height: 30px;
+                margin: 5px;
+                color: rgb(228, 228, 228);
+                background-color: #8849d4;
+                padding: 0 10px;
+                border-radius: 5px;
+              }
+            }
           }
         }
       }
       .project-menu-case-study-section {
         position: relative;
         z-index: 5;
-        width: 900px;
-        height: 450px;
+        width: 915px;
+        height: 480px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        background-color: #2c2c2c;
         .page-content {
-          background-color: #2c2c2c;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
           .page-number {
             p {
               margin-top: 15%;
@@ -664,6 +700,7 @@ a {
             h2 {
               margin: 5px;
               color: white;
+              text-align: left;
             }
             p {
               margin: 20px;
@@ -675,6 +712,7 @@ a {
             h2 {
               margin: 5px;
               color: white;
+              text-align: left;
             }
             p {
               margin: 20px;
@@ -895,5 +933,24 @@ a {
   &:active {
     border-radius: 5px;
     background: #555555;
+  }
+}
+
+@keyframes fadeInFromBottomAnimation {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  30% {
+    top: 80%;
+    opacity: 0;
+  }
+  80% {
+    top: 30%;
+    opacity: 0
+  }
+  100% {
+    top: 0;
+    opacity: 1;
   }
 }

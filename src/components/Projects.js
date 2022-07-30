@@ -11,7 +11,7 @@ const Projects = () => {
     <section className="Projects" id="Projects">
       <h1>Projects</h1>
       <div className="film">
-        <Squares />
+        <TopSquares />
         <div className="projects-content">
           <div className="blank-project-right"></div>
           <div className="project cta" onClick={() => {
@@ -40,7 +40,7 @@ const Projects = () => {
           </div>
           <div className="blank-project-left"></div>
         </div>
-        <Squares />
+        <BottomSquares />
         <div className="film-backside"></div>
       </div>
       <ProjectMenu selectedProjectIndex={selectedProjectIndex} menuIsActive={menuIsActive} toggleMenu={toggleMenu}/>
@@ -48,20 +48,47 @@ const Projects = () => {
   );
 }
 
-const Squares = () => {
+const TopSquares = () => {
   const makeOneSquare = (key) => {
     return (
       <div className="Square" key={key}></div>
     );
   }
-  // Returning n number of 'Square' divs with unique keys (i) into an array mapped inside 'Squares'
+  // Returning n number of 'Square' divs with unique keys (i) into an array mapped inside 'TopSquares'
   const makeSquares = (n) => {
     let squareArray = [];
     for (let i = 0; i < n; i++) {
       squareArray[i] = makeOneSquare(i);
     }
     return (
-      <div className="Squares">
+      <div className="TopSquares">
+        <div className="first-square"></div>
+          {squareArray.map((item) => item)}
+        <div className="last-square"></div>
+      </div>
+    );
+  }
+  return (
+    <div>
+      {makeSquares(32)}
+    </div>
+  );
+}
+
+const BottomSquares = () => {
+  const makeOneSquare = (key) => {
+    return (
+      <div className="Square" key={key}></div>
+    );
+  }
+  // Returning n number of 'Square' divs with unique keys (i) into an array mapped inside 'BottomSquares'
+  const makeSquares = (n) => {
+    let squareArray = [];
+    for (let i = 0; i < n; i++) {
+      squareArray[i] = makeOneSquare(i);
+    }
+    return (
+      <div className="BottomSquares">
         <div className="first-square"></div>
           {squareArray.map((item) => item)}
         <div className="last-square"></div>
