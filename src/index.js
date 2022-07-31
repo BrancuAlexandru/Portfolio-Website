@@ -6,7 +6,7 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 const isDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
-let theme = isDark ? 'darkTheme' : 'lightTheme';
+let theme = isDark ? 'dark' : 'light';
 
 root.render(
   <StrictMode>

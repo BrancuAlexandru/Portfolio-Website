@@ -19,7 +19,7 @@ const Background = (props) => {
     height: 2940
   }
   useEffect(() => {
-    if (props.theme === 'darkTheme') {
+    if (props.theme === 'dark') {
       setSelectedTheme(themes[1]);
     } else {
       setSelectedTheme(themes[0]);
