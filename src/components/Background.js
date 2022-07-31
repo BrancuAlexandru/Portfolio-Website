@@ -16,7 +16,7 @@ const Background = (props) => {
   let [selectedTheme, setSelectedTheme] = useState([]);
   const svgSize = {
     width: 1600,
-    height: 2960
+    height: 2940
   }
   useEffect(() => {
     if (props.theme === 'darkTheme') {
