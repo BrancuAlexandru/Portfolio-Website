@@ -19,7 +19,7 @@ const Projects = () => {
             setMenuIsActive(true);
             }}>
             <div className="project-image">
-              <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
+              <img src="./images/firstProject.webp" alt="screenshot of google.com"  loading="lazy"/>
             </div>
           </div>
           <div className="project cta" onClick={() => {
@@ -27,7 +27,7 @@ const Projects = () => {
             setMenuIsActive(true);
             }}>
             <div className="project-image">
-              <img src="./images/landingPage.webp" alt="screenshot of the portfolio" style={{objectFit: 'cover', objectPosition: '0 0'}}/>
+              <img src="./images/landingPage.webp" alt="screenshot of the portfolio" style={{objectFit: 'cover', objectPosition: '0 0'}} loading="lazy"/>
             </div>
           </div>
           <div className="project cta" onClick={() => {
@@ -35,7 +35,7 @@ const Projects = () => {
             setMenuIsActive(true);
             }}>
             <div className="project-image">
-              <img src="./images/firstProject.webp" alt="screenshot of google.com"/>
+              <img src="./images/firstProject.webp" alt="screenshot of google.com" loading="lazy"/>
             </div>
           </div>
           <div className="blank-project-left"></div>
