@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Background from './components/Background';
 import BackToTopArrow from './components/BackToTopArrow';
+import Credits from "./components/Credits";
 
 const App = (props) => {
   if (props.theme === 'lightTheme') {
@@ -22,6 +23,7 @@ const App = (props) => {
       <About />
       <Projects />
       <Contact />
+      <Credits />
     </div>
   );
 }
