@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,16 +9,24 @@ import BackToTopArrow from './components/BackToTopArrow';
 import Credits from "./components/Credits";
 
 const App = (props) => {
-  if (props.theme === 'lightTheme') {
-    import('./lightTheme.scss');
-  } else {
-    import('./darkTheme.scss');
+  const [theme, setTheme] = useState(props.theme);
+  const [style, setStyle] = useState();
+  const toggleTheme = () => {
+    theme === 'lightTheme' ? setTheme('darkTheme') : setTheme('lightTheme');
   }
+  useEffect(() => {
+    if (theme === 'darkTheme') {
+      setStyle('./src/darkTheme.scss');
+    } else {
+      setStyle('./src/lightTheme.scss');
+    }
+  }, [theme])
   return (
-    <div className="App" theme={props.theme}>
-      <Background theme={props.theme}/>
+    <div className="App" theme={theme}>
+      <link rel="stylesheet" href={style} />
+      <Background theme={theme}/>
       <BackToTopArrow />
-      <Navbar theme={props.theme}/>
+      <Navbar theme={theme} toggleTheme={toggleTheme}/>
       <Hero />
       <About />
       <Projects />

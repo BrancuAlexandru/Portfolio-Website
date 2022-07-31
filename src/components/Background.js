@@ -24,7 +24,7 @@ const Background = (props) => {
     } else {
       setSelectedTheme(themes[0]);
     }
-  }, [])
+  }, [props.theme])
   return (
     <div className="Background">
       <svg xmlns="http://www.w3.org/2000/svg" width={svgSize.width} height={svgSize.height} viewBox={`0 0 ${svgSize.width} ${svgSize.height}`}>

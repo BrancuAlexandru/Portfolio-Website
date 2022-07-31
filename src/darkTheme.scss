@@ -120,29 +120,13 @@ a {
     position: relative;
     width: 26px;
     height: 26px;
-    margin-top: 60px;
-    margin-right: 20px;
+    margin-top: 61px;
+    margin-right: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     &:hover {
       cursor: pointer;
-    }
-    .theme-switch-button {
-      background-image: linear-gradient(180deg, #dbdbdb 50%, #acacac 100%);
-      height: 16px;
-      width: 16px;
-      border-radius: 16px;
-      border: 2px solid #e9e9e9;
-      z-index: 2;
-      &:hover {
-        background-image: linear-gradient(180deg, #bdbdbd 50%, #868686 100%);
-        border: 2px solid #dddddd;
-      }
-      &:active {
-        background-image: linear-gradient(180deg, #a1a1a1 50%, #7a7a7a 100%);
-        border: 2px solid #b9b9b9;
-      }
     }
   }
   .projects-button {
