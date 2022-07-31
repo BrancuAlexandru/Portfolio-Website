@@ -245,7 +245,14 @@ a {
       .character {
         width: 500px;
         height: 400px;
+        .shadow {
+          position: relative;
+          top: 2.1%;
+          left: 2.1%;
+        }
         svg {
+          position: relative;
+          bottom: 119%;
           transform: scaleX(-1) scale(0.9);
           -webkit-user-drag: none;
         }
