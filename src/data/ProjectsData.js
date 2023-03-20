@@ -3,23 +3,44 @@ const projectsData = [
     photos: {
       pages: [
         {
-          imageSrc: './',
-          title: '',
-          body: '',
+          imageSrc: './images/authentication.webp',
+          title: 'Log In',
+          body: 'This is where the user can create a new account.',
           madeIn: ''
         }
       ]
     },
     technology: {
-      body: '',
-      skills: []
+      body: 'This is a simple authentication app I used to learn how to work with a database, a serverside language and a framework for it, and how routing works.',
+      skills: [
+        'AJAX',
+        'JavaScript',
+        'PHP',
+        'Code Igniter4',
+        'MySql',
+        'Apache',
+        'XAMPP',
+        'Routing',
+        'CSS'
+      ]
     },
     caseStudy: {
       pages: [
         {
-          challenge: '',
-          solution: ''
-        }
+          challenge: 'Converting a PHP application to use AJAX',
+          solution: 'Inserting JavaScript code using PHP to implement AJAX functionality',
+          learned: 'I deepened my understanding of both PHP and AJAX'
+        },
+        {
+          challenge: 'Using Code Igniter\' htaccess file',
+          solution: 'Found what parts of which htaccess files are relevant',
+          learned: 'XAMPP requires a lot of initial configuration to work correctly'
+        },
+        {
+          challenge: '\'Page Not Found\' errors',
+          solution: 'Creating routes in code igniter\'s configuration files that point to PHP functions',
+          learned: 'How to work with routes'
+        },
       ]
     }
   },
@@ -29,7 +50,7 @@ const projectsData = [
         {
           imageSrc: './images/landingPage.webp',
           title: 'Landing Page',
-          body: "This is the landing page, built after the design. It deviates from the design in a lot of ways, but the design was meant to be flexible and improved upon.",
+          body: 'This is the landing page, built after the design. It deviates from the design in a lot of ways, but the design was meant to be flexible and improved upon.',
           madeIn: 'Made in Photoshop.'
         },
         {
@@ -64,8 +85,8 @@ const projectsData = [
       pages: [
         {
           challenge: 'Changing child component state from parent',
-          solution: "Passing a function and the state it changes into the child's props",
-          learned: "How to make a parent and child components interact, I also now have a better understanding of React's data flow"
+          solution: 'Passing a function and the state it changes into the child\'s props',
+          learned: 'How to make a parent and child components interact, I also now have a better understanding of React\'s data flow'
         },
         {
           challenge: 'Working with .svg files and inline svg',
@@ -79,22 +100,33 @@ const projectsData = [
     photos: {
       pages: [
         {
-          imageSrc: './',
-          title: '',
-          body: '',
+          imageSrc: './images/gamefinderScreenshot.webp',
+          title: 'Gamefinder Extension',
+          body: 'This is an extension I made as a free commission for a youtuber named Bluedrake42. It shows you what game is featured in a video without having to click on it.',
           madeIn: ''
         }
       ]
     },
     technology: {
-      body: '',
-      skills: []
+      body: 'I used google\'s content script system to interact with YouTube pages with JavaScript, Git and Github for version control.',
+      skills: [
+        'JavaScript',
+        'HTML',
+        'Git',
+        'Google Extension API'
+      ]
     },
     caseStudy: {
       pages: [
         {
-          challenge: '',
-          solution: ''
+          challenge: 'Interacting with YouTube\'s page population system',
+          solution: 'Using a content script to dynamically inject various scripts into the page depending on the URL',
+          learned: 'The difference between background scripts and content scripts, and how Google Extension API interacts with webpages'
+        },
+        {
+          challenge: 'Loading and \"unloading\" scripts',
+          solution: 'Refreshing the user\'s page upon detecting a new URL',
+          learned: 'Unloading scripts is extremely difficult if not impossible in some contexts'
         }
       ]
     }

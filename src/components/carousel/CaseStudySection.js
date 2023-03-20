@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import projectsData from '../../data/ProjectsData';
 
 const CaseStudySection = (props) => {
@@ -45,7 +45,7 @@ const CaseStudySection = (props) => {
         <div className="page-number">
           {projectsData[props.selectedProjectIndex].caseStudy.pages.map((item, id) => {
             return (
-              <Bubble key={id} id={id} currentPageNumber={currentPageNumber}/>
+              <Bubble key={id} id={id} currentPageNumber={currentPageNumber} theme={props.theme}/>
             )
           })}
         </div>
@@ -55,9 +55,16 @@ const CaseStudySection = (props) => {
 }
 
 const Bubble = (props) => {
+  const [activeColor, setActiveColor] = useState(props.theme === 'dark' ? '#a203f8' : '#039ef8');
   let defaultColor = "#a5a5a5";
-  let activeColor = "#a203f8";
   let id = props.id;
+  useEffect(() => {
+    if (props.theme === 'dark') {
+      setActiveColor("#a203f8");
+    } else {
+      setActiveColor("#039ef8");
+    }
+  }, [props.theme])
   return (
     <div className="bubble-parent">
       {id === props.currentPageNumber && 

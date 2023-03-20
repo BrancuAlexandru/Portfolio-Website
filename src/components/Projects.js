@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectMenu from './carousel/ProjectMenu'
 
-const Projects = () => {
+const Projects = (props) => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState();
   const [menuIsActive, setMenuIsActive] = useState(false);
+  const [highlightColor, setHighlightColor] = useState();
   const toggleMenu = () => {
-    setMenuIsActive(!menuIsActive)
+    setMenuIsActive(!menuIsActive);
   }
+  useEffect(() => {
+    if (props.theme === 'dark') {
+      setHighlightColor("#a203f8");
+    } else {
+      setHighlightColor("#039ef8");
+    }
+  }, [props.theme])
   return (
     <section className="Projects" id="Projects">
       <h1>Projects</h1>
@@ -19,7 +27,7 @@ const Projects = () => {
             setMenuIsActive(true);
             }}>
             <div className="project-image">
-              <img src="./images/firstProject.webp" alt="screenshot of google.com"  loading="lazy"/>
+              <img src="./images/authentication.webp" alt="screenshot of the log in page"  loading="lazy"/>
             </div>
           </div>
           <div className="project cta" onClick={() => {
@@ -35,7 +43,7 @@ const Projects = () => {
             setMenuIsActive(true);
             }}>
             <div className="project-image">
-              <img src="./images/firstProject.webp" alt="screenshot of google.com" loading="lazy"/>
+              <img src="./images/gamefinderScreenshot.webp" alt="screenshot of Gamefinder extension" loading="lazy"/>
             </div>
           </div>
           <div className="blank-project-left"></div>
@@ -43,7 +51,7 @@ const Projects = () => {
         <BottomSquares />
         <div className="film-backside"></div>
       </div>
-      <ProjectMenu selectedProjectIndex={selectedProjectIndex} menuIsActive={menuIsActive} toggleMenu={toggleMenu}/>
+      <ProjectMenu selectedProjectIndex={selectedProjectIndex} menuIsActive={menuIsActive} toggleMenu={toggleMenu} theme={props.theme} highlightColor={highlightColor}/>
     </section>
   );
 }

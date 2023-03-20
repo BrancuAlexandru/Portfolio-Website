@@ -5,11 +5,13 @@ const Contact = () => {
     <section className="Contact" id="Contact">
       <h1 className="section-title">Contact</h1>
       <div className="contact-content">
-        <div className="form">
-          <input type="text" className="text-input name-input" placeholder="Name/Nickname"/>
-          <textarea className="text-input body-input" placeholder="Type here.."/>
-          <button className="cta" id="submit-button">Submit</button>
-        </div>
+        <form action='mailto:personal@alexandrubrancu.com'>
+          <div className="form">
+            <input name='name' type="text" className="text-input name-input" placeholder="Name/Nickname"/>
+            <textarea name='message' className="text-input body-input" placeholder="Type here.."/>
+            <button className="cta" id="submit-button">Submit</button>
+          </div>
+        </form>
         <div className="links">
           <a className="github-link cta" id="GitHub-button" href="https://github.com/BrancuAlexandru" target="_blank">
             <div className="link-image">

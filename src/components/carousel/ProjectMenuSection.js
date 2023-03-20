@@ -7,13 +7,13 @@ const ProjectMenuSection = (props) => {
   return (
     <div>
       {props.activeSection === 2 &&
-        <CaseStudySection selectedProjectIndex={props.selectedProjectIndex}/>
+        <CaseStudySection selectedProjectIndex={props.selectedProjectIndex} theme={props.theme}/>
       }
       {props.activeSection === 1 &&
         <TechnologySection selectedProjectIndex={props.selectedProjectIndex}/>
       }
       {props.activeSection === 0 &&
-        <PhotosSection selectedProjectIndex={props.selectedProjectIndex}/>
+        <PhotosSection selectedProjectIndex={props.selectedProjectIndex} theme={props.theme}/>
       }
     </div>
   )

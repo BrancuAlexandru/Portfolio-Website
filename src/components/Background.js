@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 const Background = (props) => {
   const themes = [
     {
-      firstColor: '#e5d9f7',
-      middleColor: '#f5f0fd',
-      lastColor: '#ffffff'
+      firstColor: '#f0f0f0',
+      middleColor: '#d8d8d8',
+      lastColor: '#adadad'
     },
     {
       firstColor: '#1c1b1c',
@@ -16,7 +16,7 @@ const Background = (props) => {
   let [selectedTheme, setSelectedTheme] = useState([]);
   const svgSize = {
     width: 1600,
-    height: 2940
+    height: 2930
   }
   useEffect(() => {
     if (props.theme === 'dark') {

@@ -1,47 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectMenuSection from './ProjectMenuSection';
 
 const ProjectMenu = (props) => {
   const [activeSection, setActiveSection] = useState(0);
   const [colors, setColors] = useState({
-    photos: "#9d6df7",
+    photos: "#a203f8"/* "#a203f8" */,
     technology: "white",
     caseStudy: "white"
   });
-  const changeColor = (section) => {
+  const changeColor = (section) => { // section might be undefined?
     if (section === 2) {
       setColors({
         photos: "white",
         technology: "white",
-        caseStudy: "#9d6df7"
-      })
+        caseStudy: props.highlightColor
+      });
     } else if (section === 1) {
       setColors({
         photos: "white",
-        technology: "#9d6df7",
+        technology: props.highlightColor,
         caseStudy: "white"
-      })
+      });
     } else {
       setColors({
-        photos: "#9d6df7",
+        photos: props.highlightColor,
         technology: "white",
         caseStudy: "white"
-      })
+      });
     }
   }
   return (
     <div>
-      {props.menuIsActive &&
+      { props.menuIsActive &&
       <div className="project-menu">
         <div className="project-menu-top">
           <div className="project-menu-section-button cta">
             <a onClick={() => {
               setActiveSection(0);
-              setColors({
-                photos: "#9d6df7",
-                technology: "white",
-                caseStudy: "white"
-              })
+              changeColor(0);
             }}
             style={{color: colors.photos}}
             >
@@ -49,11 +45,7 @@ const ProjectMenu = (props) => {
             </a>
             <a onClick={() => {
               setActiveSection(1);
-              setColors({
-                photos: "white",
-                technology: "#9d6df7",
-                caseStudy: "white"
-              })
+              changeColor(1);
             }}
             style={{color: colors.technology}}
             >
@@ -61,11 +53,7 @@ const ProjectMenu = (props) => {
             </a>
             <a onClick={() => {
               setActiveSection(2);
-              setColors({
-                photos: "white",
-                technology: "white",
-                caseStudy: "#9d6df7"
-              })
+              changeColor(2);
             }}
             style={{color: colors.caseStudy}}
             >
@@ -94,7 +82,7 @@ const ProjectMenu = (props) => {
           </svg>
         </a>
         <div className="project-menu-section">
-          <ProjectMenuSection selectedProjectIndex={props.selectedProjectIndex} activeSection={activeSection}/>
+          <ProjectMenuSection selectedProjectIndex={props.selectedProjectIndex} activeSection={activeSection} theme={props.theme}/>
         </div>
         <a className="project-menu-right-arrow" onClick={() => {
           if (activeSection < 2) {

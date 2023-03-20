@@ -24,9 +24,9 @@ const App = (props) => {
         <Background theme={theme}/>
         <BackToTopArrow />
         <Navbar theme={theme} toggleTheme={toggleTheme}/>
-        <Hero />
+        <Hero theme={theme}/>
         <About />
-        <Projects />
+        <Projects theme={theme}/>
         <Contact />
         <Credits />
       </div>

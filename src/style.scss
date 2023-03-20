@@ -27,7 +27,7 @@ html {
   font-weight: 300;
   user-select: none;
   overflow: hidden;
-  height: 2940px;
+  height: 2930px;
 }
 
 @mixin flexJustifyAlign() {
@@ -52,11 +52,9 @@ a {
 
 .section-title {
   width: 100%;
-  color: #a8a8a8;
   font-weight: 500;
   font-size: 70px;
   margin: 120px 0 30px 130px;
-  text-shadow: 3px 3px #000000;
   &:hover {
     cursor: default;
   }
@@ -312,17 +310,17 @@ a {
           }
         }
       }
-      .blank-project-left {
-        margin: auto 0 auto 20px;
+      .blank-project-left,
+      .blank-project-right {
         z-index: 2;
         width: 90px;
         height: 215px;
       }
+      .blank-project-left {
+        margin: auto 0 auto 20px;
+      }
       .blank-project-right {
         margin: auto 20px auto 0;
-        z-index: 2;
-        width: 90px;
-        height: 215px;
       }
     }
     .film-backside {
@@ -342,29 +340,23 @@ a {
     height: 55px;
     width: 100%;
     z-index: 2;
-    .Square {
-      position: relative;
-      width: 20px;
-      height: 20px;
-      margin: 0 11px;
-      border-radius: 2px;
-      z-index: 2;
-    }
-    .first-square {
-      position: relative;
-      width: 20px;
-      height: 20px;
-      margin: 0 11px 0 20px;
-      border-radius: 2px;
-      z-index: 2;
-    }
+    .Square,
+    .first-square,
     .last-square {
       position: relative;
       width: 20px;
       height: 20px;
-      margin: 0 20px 0 11px;
       border-radius: 2px;
       z-index: 2;
+    }
+    .Square {
+      margin: 0 11px;
+    }
+    .first-square {
+      margin: 0 11px 0 20px;
+    }
+    .last-square {
+      margin: 0 20px 0 11px;
     }
   }
   .TopSquares {
@@ -538,7 +530,7 @@ a {
               display: inline-block;
               margin: 20px 0;
               text-align: right;
-              margin-right: 21px;
+              margin: auto 21px;
             }
           }
           .technology-bottom {
@@ -547,7 +539,6 @@ a {
             align-items: center;
             .skills-wrapper {
               width: 273px;
-              height: 160px;
               text-align: left;
               .technology-skill {
                 display: inline-block;
@@ -729,7 +720,7 @@ a {
 .Credits {
   margin: 0 auto;
   position: relative;
-  min-height: 240px;
+  min-height: 210px;
   .open {
     display: flex;
     flex-direction: row;
@@ -759,9 +750,7 @@ a {
         align-items: center;
         margin-bottom: 5px;
         animation: creditsTextFadeIn 0.6s ease;
-        h3 {
-          margin-right: 10px;
-        }
+        h3,
         a {
           margin-right: 10px;
         }
@@ -811,6 +800,10 @@ $dark-purple: #862ed8;
 $darker-purple: #7426bd;
 
 .dark {
+  .section-title {
+    color: #000000;
+    text-shadow: 3px 3px #f1f1f1;
+  }
   .back-to-top-arrow {
     background-color: #aaaaaa;
     box-shadow: 2px 2px #000000;
@@ -833,6 +826,14 @@ $darker-purple: #7426bd;
     .name {
       color: #dadada;
       text-shadow: 1px 1px #797979;
+    }
+    .theme-switch {
+      .theme-switch-button {
+        svg {
+          border-radius: 50%;
+          border: 2px solid #fff;
+        }
+      }
     }
     .projects-button {
       color: #dadada;
@@ -888,10 +889,7 @@ $darker-purple: #7426bd;
   }
   .About {
     .about-me-content {
-      .about-me-skills {
-        background-color: #2c2c2c;
-        border-bottom: 5px solid $purple;
-      }
+      .about-me-skills,
       .about-me-text {
         background-color: #2c2c2c;
         border-bottom: 5px solid $purple;
@@ -906,8 +904,8 @@ $darker-purple: #7426bd;
   }
   .Projects {
     h1 {
-      color: #a8a8a8;
-      text-shadow: 3px 3px #000000;
+      color: #000000;
+      text-shadow: 3px 3px #f1f1f1;
     }
     .film {
       .projects-content {
@@ -924,9 +922,7 @@ $darker-purple: #7426bd;
             }
           }
         }
-        .blank-project-left {
-          background-color: #212121;
-        }
+        .blank-project-left,
         .blank-project-right {
           background-color: #212121;
         }
@@ -938,12 +934,8 @@ $darker-purple: #7426bd;
     .TopSquares,
     .BottomSquares {
       background-color: #2b2b2b;
-      .Square {
-        background-color: #cacaca;
-      }
-      .first-square {
-        background-color: #cacaca;
-      }
+      .Square,
+      .first-square,
       .last-square {
         background-color: #cacaca;
       }
@@ -952,6 +944,7 @@ $darker-purple: #7426bd;
       background-color: #333333;
       .project-menu-top {
         .project-menu-section-button {
+          color: white;
           a {
             text-shadow: 2px 2px #212121;
             &:hover {
@@ -963,19 +956,19 @@ $darker-purple: #7426bd;
           }
         }
         .close-menu-button {
-          background-color: #9c5fe7;
+          background-color: $purple;
           &:hover {
-            background-color: #b175fa;
+            background-color: #c251ff;
           }
           &:active {
-            background-color: #8849d4;
+            background-color: #8205c5;
           }
         }
       }
       .project-menu-left-arrow,
       .project-menu-right-arrow {
         svg {
-          fill: white;
+          fill: $purple;
         }
       }
       .project-menu-section {
@@ -987,17 +980,14 @@ $darker-purple: #7426bd;
               .left-arrow,
               .right-arrow {
                 svg {
-                  fill: white;
+                  fill: $purple;
                 }
               }
             }
             .photos-section-text {
               background-color: #444444;
               border-left: 5px solid $dark-purple;
-              h2 {
-                color: white;
-                text-shadow: 2px 2px #212121;
-              }
+              h2,
               .body-text {
                 color: white;
                 text-shadow: 2px 2px #212121;
@@ -1016,6 +1006,7 @@ $darker-purple: #7426bd;
               border-right: 5px solid $dark-purple;
               p {
                 text-shadow: 2px 2px #212121;
+                color: white;
               }
             }
             .technology-bottom {
@@ -1032,30 +1023,30 @@ $darker-purple: #7426bd;
           background-color: #2c2c2c;
           .page-content {
             .case-study-challenge {
-              h2 {
+              h2,
+              p {
                 color: white;
               }
               p {
-                color: white;
-                border-left: 5px solid #753ce0;
+                border-left: 5px solid $purple;
               }
             }
             .case-study-solution {
-              h2 {
+              h2,
+              p {
                 color: white;
               }
               p {
-                color: white;
-                border-right: 5px solid #753ce0;
+                border-right: 5px solid $purple;
               }
             }
             .case-study-learned {
-              h2 {
+              h2,
+              p {
                 color: white;
               }
               p {
-                color: white;
-                border-left: 5px solid #753ce0;
+                border-left: 5px solid $purple;
               }
             }
             .left-arrow,
@@ -1070,9 +1061,6 @@ $darker-purple: #7426bd;
     }
   }
   .Contact {
-    h1 {
-      color: #a8a8a8;
-    }
     .contact-content {
       .form {
         .text-input {
@@ -1233,74 +1221,99 @@ $darker-purple: #7426bd;
   }
 }
 
+$blue: #039ef8;
+$dark-blue: #008ddf;
+$darker-blue: #0c7fc2;
+
 .light {
+  .section-title {
+    color: #f1f1f1;
+    text-shadow: 3px 3px #000000;
+  }
   .back-to-top-arrow {
-    background-color: #998ea0;
-    box-shadow: 2px 2px #786f7e;
+    background-color: #e6e6e6;
+    box-shadow: 2px 2px #c4c4c4;
+    svg {
+      fill: $blue;
+    }
     &:hover {
-      background-color: #a79fac;
-      box-shadow: 2px 2px #887f8d;
+      background-color: #f3f3f3;
+      box-shadow: 2px 2px #d3d3d3;
+      svg {
+        fill: #2fb3ff;
+      }
     }
     &:active {
-      background-color: #847b8a;
-      box-shadow: 2px 2px #5e5763;
-    }
-    svg {
-      fill: #ffffff;
+      background-color: #cecece;
+      box-shadow: 2px 2px #a8a8a8;
+      svg {
+        fill: $dark-blue;
+      }
     }
   }
   .Navbar {
     .name {
-      color: #3f185f;
+      color: #1b1b1b;
       text-shadow: 1px 1px #938ab4;
     }
+    .theme-switch {
+      .theme-switch-button {
+        svg {
+          border-radius: 50%;
+          border: 2px solid #aaaaaa;
+        }
+      }
+    }
     .projects-button {
-      color: #461d7c;
-      text-shadow: 1px 1px #938ab4;
+      color: $blue;
+      text-shadow: 2px 2px #ffffff;
       &:hover {
-        color: #585a70;
+        color: $dark-blue;
+        text-shadow: 2px 2px #b3b3b3;
       }
       &:active {
-        color: #03051b;
+        color: $darker-blue;
+        text-shadow: 2px 2px #8b8b8b;
       }
     }
     .contact-button {
-      background-color: #6d13c2;
-      color: #f7f8ff;
-      text-shadow: 2px 1px #4e2f86;
-      box-shadow: 3px 3px #211161;
+      background-color: #ffffff;
+      color: #363636;
+      text-shadow: 2px 2px #cacaca;
+      box-shadow: 3px 3px $blue;
       &:hover {
-        background-color: #8239c5;
+        background-color: $blue;
         color: #ffffff;
       }
       &:active {
-        background-color: #550f97;
+        background-color: $darker-blue;
         color: #e1e4ff;
       }
     }
   }
   .Hero {
     .gradient {
-      background-image: linear-gradient(90deg, #963dea 50%, #ab67eb 100%);
+      background-image: linear-gradient(90deg, #ececec 50%, #d4d4d4 100%);
       .gradient-left {
         h2 {
-          color: #efdeff;
-          text-shadow: 3px 2px #3f2d8a;
+          color: #363636;
+          text-shadow: 3px 2px #cccccc;
         }
         a {
-          background-color: #f8f0ff;
-          color: #6904c7;
-          box-shadow: 4px 4px #211161;
+          background-color: #ffffff;
+          color: #363636;
+          box-shadow: 4px 4px $blue;
         }
         #show-me-button {
-          text-shadow: 1px 1px #b1a7bb;
+          text-shadow: 2px 1px #cccccc;
           &:hover {
-            background-color: #ffffff;
-            color: #731bc5;
+            background-color: #33b1fa;
+            color: #ffffff;
+            text-shadow: 2px 1px #a0a0a0;
           }
           &:active {
-            color: #550f97;
-            background-color: #d9cde0;
+            color: #e6e6e6;
+            background-color: $dark-blue;
           }
         }
       }
@@ -1308,17 +1321,14 @@ $darker-purple: #7426bd;
   }
   .About {
     .about-me-content {
-      .about-me-skills {
-        background-color: #f8f8f8;
-        border-bottom: 5px solid #2e094e;
-      }
+      .about-me-skills,
       .about-me-text {
         background-color: #f8f8f8;
-        border-bottom: 5px solid #3e0b6b;
+        border-bottom: 5px solid $blue;
         .about-me-paragraph {
           p {
-            color: #080e4a;
-            text-shadow: 1px 1px #ad8fc7;
+            color: #222222;
+            text-shadow: 1.4px 1.4px #929292;
           }
         }
       }
@@ -1326,7 +1336,7 @@ $darker-purple: #7426bd;
   }
   .Projects {
     h1 {
-      color: #a8a8a8;
+      color: #f1f1f1;
       text-shadow: 3px 3px #000000;
     }
     .film {
@@ -1336,7 +1346,7 @@ $darker-purple: #7426bd;
           border-top: 5px solid #2b2b2b;
           border-bottom: 5px solid #2b2b2b;
           &:hover {
-            border-bottom: 5px solid #753ce0;
+            border-bottom: 5px solid $dark-blue;
           }
           .project-image {
             &::after {
@@ -1344,9 +1354,7 @@ $darker-purple: #7426bd;
             }
           }
         }
-        .blank-project-left {
-          background-color: #212121;
-        }
+        .blank-project-left,
         .blank-project-right {
           background-color: #212121;
         }
@@ -1358,44 +1366,43 @@ $darker-purple: #7426bd;
     .TopSquares,
     .BottomSquares {
       background-color: #2b2b2b;
-      .Square {
-        background-color: #cacaca;
-      }
-      .first-square {
-        background-color: #cacaca;
-      }
+      .Square,
+      .first-square,
       .last-square {
-        background-color: #cacaca;
+        background-color: #ffffff;
+        color: #adadad;
       }
     }
     .project-menu {
-      background-color: #333333;
+      background-color: #fcfcfc;
       .project-menu-top {
         .project-menu-section-button {
           a {
-            text-shadow: 2px 2px #212121;
+            color: white;
+            text-shadow: 2px 2px #f1f1f1;
             &:hover {
-              text-decoration-color: #6d43b9;
+              text-decoration-color: $blue;
+              color: #2fb3ff;
             }
             &:active {
-              color: #7646ce;
+              color: #2fb3ff;
             }
           }
         }
         .close-menu-button {
-          background-color: #9c5fe7;
+          background-color: $blue;
           &:hover {
-            background-color: #b175fa;
+            background-color: #2fb3ff;
           }
           &:active {
-            background-color: #8849d4;
+            background-color: #0086d3;
           }
         }
       }
       .project-menu-left-arrow,
       .project-menu-right-arrow {
         svg {
-          fill: white;
+          fill: $blue;
         }
       }
       .project-menu-section {
@@ -1407,24 +1414,21 @@ $darker-purple: #7426bd;
               .left-arrow,
               .right-arrow {
                 svg {
-                  fill: white;
+                  fill: $blue;
                 }
               }
             }
             .photos-section-text {
               background-color: #444444;
-              border-left: 5px solid #6f39d4;
-              h2 {
-                color: white;
-                text-shadow: 2px 2px #212121;
-              }
+              border-left: 5px solid $blue;
+              h2,
               .body-text {
                 color: white;
                 text-shadow: 2px 2px #212121;
               }
               .made-in-text {
                 color: white;
-                text-shadow: 1px 1px #753ce0;
+                text-shadow: 1px 1px $blue;
               }
             }
           }
@@ -1433,15 +1437,17 @@ $darker-purple: #7426bd;
           background-color: #2c2c2c;
           .technology-wrapper {
             .technology-top {
-              border-right: 5px solid #6f39d4;
+              border-right: 5px solid $blue;
               p {
+                color: white;
                 text-shadow: 2px 2px #212121;
               }
             }
             .technology-bottom {
               .skills-wrapper {
                 .technology-skill {
-                  background-color: #8849d4;
+                  background-color: $dark-blue;
+                  color: white;
                 }
               }
             }
@@ -1451,30 +1457,30 @@ $darker-purple: #7426bd;
           background-color: #2c2c2c;
           .page-content {
             .case-study-challenge {
-              h2 {
+              h2,
+              p {
                 color: white;
               }
               p {
-                color: white;
-                border-left: 5px solid #753ce0;
+                border-left: 5px solid $blue;
               }
             }
             .case-study-solution {
-              h2 {
+              h2,
+              p {
                 color: white;
               }
               p {
-                color: white;
-                border-right: 5px solid #753ce0;
+                border-right: 5px solid $blue;
               }
             }
             .case-study-learned {
-              h2 {
+              h2,
+              p {
                 color: white;
               }
               p {
-                color: white;
-                border-left: 5px solid #753ce0;
+                border-left: 5px solid $blue;
               }
             }
             .left-arrow,
@@ -1489,41 +1495,43 @@ $darker-purple: #7426bd;
     }
   }
   .Contact {
-    h1 {
-      color: #080d4a;
-    }
     .contact-content {
       .form {
         .text-input {
-          background-color: #f8f8f8;
-          border-bottom: 5px solid #2e094e;
+          background-color: #dddddd;
+          border-bottom: 5px solid $dark-blue;
+          color: #5a5a5a;
           &::placeholder {
-            color: #a8a8a8;
+            color: #f1f1f1;
           }
         }
         #submit-button {
-          background-color: #6d13c2;
+          background-color: #dddddd;
           color: #f7f8ff;
-          text-shadow: 2px 1px #4e2f86;
+          text-shadow: 2px 1px $darker-blue;
+          box-shadow: 3px 3px $blue;
           &:hover {
-            background-color: #8239c5;
+            background-color: $blue;
             color: #ffffff;
+            box-shadow: 3px 3px $dark-blue;
           }
           &:active {
-            background-color: #550f97;
+            background-color: $dark-blue;
             color: #e1e4ff;
+            box-shadow: 3px 3px $darker-blue;
           }
         }
       }
       .links {
-        text-shadow: 2px 2px #9196cf;
+        text-shadow: 2px 2px $blue;
         a {
           color: #acacac;
         }
         #GitHub-button {
+          color: #f1f1f1;
           .link-image {
             svg {
-              fill: #5a5a5a;
+              fill: #eeeeee;
             }
           }
           &:hover {
@@ -1533,16 +1541,17 @@ $darker-purple: #7426bd;
             }
           }
           &:active {
-            color: #51009c;
+            color: $dark-blue;
             svg {
-              fill: #8b3ad6;
+              fill: $blue;
             }
           }
         }
         #resume-button {
+          color: #f1f1f1;
           .link-image {
             svg {
-              fill: #5a5a5a;
+              fill: #eeeeee;
             }
           }
           &:hover {
@@ -1552,16 +1561,17 @@ $darker-purple: #7426bd;
             }
           }
           &:active {
-            color: #51009c;
+            color: $dark-blue;
             svg {
-              fill: #8b3ad6;
+              fill: $blue;
             }
           }
         }
         #LinkedIn-button {
+          color: #f1f1f1;
           .link-image {
             svg {
-              fill: #5a5a5a;
+              fill: #eeeeee;
             }
           }
           &:hover {
@@ -1571,9 +1581,9 @@ $darker-purple: #7426bd;
             }
           }
           &:active {
-            color: #51009c;
+            color: $dark-blue;
             svg {
-              fill: #8b3ad6;
+              fill: $blue;
             }
           }
         }
@@ -1586,28 +1596,26 @@ $darker-purple: #7426bd;
       .credits-left-side,
       .credits-right-side {
         background-color: #dedede;
-        border-top: 5px solid #a203f8;
-        border-bottom: 5px solid #a203f8;
+        border-top: 5px solid $blue;
+        border-bottom: 5px solid $blue;
       }
       .credits-left-side {
-        border-left: 5px solid #a203f8;
+        border-left: 5px solid $blue;
       }
       .credits-right-side {
-        border-right: 5px solid #a203f8;
+        border-right: 5px solid $blue;
       }
       .credits-wrapper {
         h2 {
           color: #676767;
         }
         .credit-element {
-          h3 {
+          h3,
+          p {
             color: #676767;
           }
           a {
-            color: #b248f8;
-          }
-          p {
-            color: #676767;
+            color: $blue;
           }
         }
       }
@@ -1616,7 +1624,7 @@ $darker-purple: #7426bd;
       .credits-button {
         background-color: #efefef;
         color: #676767;
-        box-shadow: 3px 3px #a203f8;
+        box-shadow: 3px 3px $blue;
       }
     }
   }
