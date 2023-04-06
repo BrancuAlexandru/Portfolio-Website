@@ -7,8 +7,7 @@ const About = () => {
       <div className="about-me-content">
         <div className="about-me-text">
           <div className="about-me-paragraph">
-            <p>I want to make useful products and amazing services that can help people globally.</p>
-            <p>I've contributed to open source projects and love to be part of a team.</p>
+            <p>I love drawing and painting digitally. I've contributed to open source projects, had a brief apprenticeship and like being part of a team.</p>
           </div>
         </div>
         <div className="about-me-skills">

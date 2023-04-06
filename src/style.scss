@@ -201,6 +201,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     .about-me-skills {
       margin-left: 20px;
       border-radius: 17px;
@@ -236,7 +237,7 @@ a {
         flex-direction: column;
         p {
           max-width: 575px;
-          padding: 15px 50px 15px 30px;
+          padding: 25px 50px 25px 30px;
           font-weight: 500;
           font-size: 28px;
           &:hover {
@@ -564,26 +565,8 @@ a {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          position: absolute;
           animation: fadeInFromBottom 0.4s ease;
-          margin-top: 5%;
-          min-height: 355px;
-          .page-number {
-            position: absolute;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            left: 47.5%;
-            bottom: -20%;
-            .case-study-bubble {
-              margin: 0 2px;
-              height: 7px;
-              width: 7px;
-              border-radius: 50%;
-              z-index: 6;
-              position: relative;
-            }
-          }
+          margin: auto 0;
           .case-study-challenge {
             max-width: 400px;
             h2 {
@@ -627,12 +610,32 @@ a {
             cursor: pointer;
           }
           .left-arrow {
-            left: -15%;
+            left: 23%;
             transform: rotate(-90deg);
           }
           .right-arrow {
-            right: -15%;
+            right: 23%;
             transform: rotate(90deg);
+          }
+        }
+        .pagination-wrapper {
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          .page-number {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            left: 47.5%;
+            bottom: -20%;
+            .case-study-bubble {
+              margin: 0 2px;
+              height: 7px;
+              width: 7px;
+              border-radius: 50%;
+              z-index: 6;
+              position: relative;
+            }
           }
         }
       }
@@ -802,8 +805,8 @@ $darker-purple: #7426bd;
 
 .dark {
   .section-title {
-    color: #000000;
-    text-shadow: 3px 3px #f1f1f1;
+    color: #e1e1e1;
+    text-shadow: 3px 3px #747474;
   }
   .back-to-top-arrow {
     background-color: #aaaaaa;
@@ -905,8 +908,8 @@ $darker-purple: #7426bd;
   }
   .Projects {
     h1 {
-      color: #000000;
-      text-shadow: 3px 3px #f1f1f1;
+      color: #e1e1e1;
+      text-shadow: 3px 3px #747474;
     }
     .film {
       .projects-content {
@@ -1228,7 +1231,7 @@ $darker-blue: #0c7fc2;
 
 .light {
   .section-title {
-    color: #f1f1f1;
+    color: #ffffff;
     text-shadow: 3px 3px #000000;
   }
   .back-to-top-arrow {
@@ -1337,7 +1340,7 @@ $darker-blue: #0c7fc2;
   }
   .Projects {
     h1 {
-      color: #f1f1f1;
+      color: #ffffff;
       text-shadow: 3px 3px #000000;
     }
     .film {
