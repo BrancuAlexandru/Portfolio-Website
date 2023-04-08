@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ProjectMenuSection from './ProjectMenuSection';
 
 const ProjectMenu = (props) => {
@@ -30,7 +30,7 @@ const ProjectMenu = (props) => {
     }
   }
   return (
-    <div>
+    <div className='project-menu-wrapper' style={{display: 'none'}}>
       { props.menuIsActive &&
       <div className="project-menu">
         <div className="project-menu-top">
@@ -64,6 +64,8 @@ const ProjectMenu = (props) => {
             props.toggleMenu();
             setActiveSection(0);
             changeColor(0);
+            document.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
+            document.body.style = "overflow: visible";
           }}>
           </a>
         </div>
