@@ -8,6 +8,10 @@ const Projects = (props) => {
   const toggleMenu = () => {
     setMenuIsActive(!menuIsActive);
   }
+  const showProjectMenuWrapper = () => {
+    document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: block";
+    document.body.style = "overflow: hidden";
+  }
   useEffect(() => {
     if (props.theme === 'dark') {
       setHighlightColor("#a203f8");
@@ -25,6 +29,7 @@ const Projects = (props) => {
           <div className="project cta" onClick={() => {
             setSelectedProjectIndex(0);
             setMenuIsActive(true);
+            showProjectMenuWrapper();
             }}>
             <div className="project-image">
               <img src="./images/authentication.webp" alt="screenshot of the log in page"  loading="lazy"/>
@@ -33,6 +38,7 @@ const Projects = (props) => {
           <div className="project cta" onClick={() => {
             setSelectedProjectIndex(1);
             setMenuIsActive(true);
+            showProjectMenuWrapper();
             }}>
             <div className="project-image">
               <img src="./images/landingPage.webp" alt="screenshot of the portfolio" style={{objectFit: 'cover', objectPosition: '0 0'}} loading="lazy"/>
@@ -41,6 +47,7 @@ const Projects = (props) => {
           <div className="project cta" onClick={() => {
             setSelectedProjectIndex(2);
             setMenuIsActive(true);
+            showProjectMenuWrapper();
             }}>
             <div className="project-image">
               <img src="./images/gamefinderScreenshot.webp" alt="screenshot of Gamefinder extension" loading="lazy"/>
