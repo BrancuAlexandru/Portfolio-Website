@@ -42,7 +42,7 @@ const ProjectMenu = (props) => {
       setHighlightColor(themeColors.light);
       changeColor(activeSection);
     }
-  }, [props.theme, []])
+  }, [props.theme, highlightColor])
   return (
     <div className='project-menu-wrapper' style={{display: 'none'}} onClick={() => {
       document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
