@@ -671,6 +671,7 @@ a {
     font-size: 70px;
     left: 13%;
     margin: 120px 0 30px 0;
+    z-index: -1;
   }
   .contact-content {
     display: flex;
@@ -1023,7 +1024,7 @@ $darker-purple: #7426bd;
               }
               .project-link {
                 color: $purple;
-                text-shadow: 2px 2px #212121;
+                text-shadow: 1px 1px #212121;
               }
             }
           }
@@ -1407,7 +1408,7 @@ $darker-blue: #0c7fc2;
       .project-menu-top {
         .project-menu-section-button {
           a {
-            color: white;
+            color: #000000;
             text-shadow: 2px 2px #f1f1f1;
             &:hover {
               text-decoration-color: $blue;
@@ -1436,44 +1437,47 @@ $darker-blue: #0c7fc2;
       }
       .project-menu-section {
         .project-menu-photos-section {
-          background-color: #2c2c2c;
+          background-color: #fcfcfc;
           .page-content {
             .photos-section-image {
-              background-color: #232323;
+              background-color: #e7e7e7;
               .left-arrow,
               .right-arrow {
                 svg {
-                  fill: #ffffff;
+                  fill: #000000;
                 }
               }
             }
             .photos-section-text {
-              background-color: #444444;
+              background-color: #e7e7e7;
               border-left: 5px solid $blue;
-              h2,
+              h2 {
+                color: #000000;
+                text-shadow: 2px 2px #adadad;
+              }
               .body-text {
-                color: white;
-                text-shadow: 2px 2px #212121;
+                color: #000000;
+                text-shadow: 1px 1px #adadad;
               }
               .made-in-text {
-                color: white;
+                color: #000000;
                 text-shadow: 1px 1px $blue;
               }
               .project-link {
                 color: $blue;
-                text-shadow: 2px 2px #212121;
+                text-shadow: 1px 1px #adadad;
               }
             }
           }
         }
         .project-menu-technology-section {
-          background-color: #2c2c2c;
+          background-color: #ededed;
           .technology-wrapper {
             .technology-top {
               border-right: 5px solid $blue;
               p {
-                color: white;
-                text-shadow: 2px 2px #212121;
+                color: #000000;
+                text-shadow: 1px 1px #a7a7a7;
               }
             }
             .technology-bottom {
@@ -1487,39 +1491,45 @@ $darker-blue: #0c7fc2;
           }
         }
         .project-menu-case-study-section {
-          background-color: #2c2c2c;
+          background-color: #ededed;
           .page-content {
             .case-study-challenge {
               h2,
               p {
-                color: white;
+                color: #000000;
+                text-shadow: 2px 2px #bdbdbd;
               }
               p {
                 border-left: 5px solid $blue;
+                text-shadow: 1px 1px #969696;
               }
             }
             .case-study-solution {
               h2,
               p {
-                color: white;
+                color: #000000;
+                text-shadow: 2px 2px #bdbdbd;
               }
               p {
                 border-right: 5px solid $blue;
+                text-shadow: 1px 1px #969696;
               }
             }
             .case-study-learned {
               h2,
               p {
-                color: white;
+                color: #000000;
+                text-shadow: 2px 2px #bdbdbd;
               }
               p {
                 border-left: 5px solid $blue;
+                text-shadow: 1px 1px #969696;
               }
             }
             .left-arrow,
             .right-arrow {
               svg {
-                fill: white;
+                fill: #000000;
               }
             }
           }

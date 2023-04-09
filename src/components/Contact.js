@@ -5,11 +5,20 @@ const Contact = () => {
     <section className="Contact" id="Contact">
       <h1 className="section-title">Contact</h1>
       <div className="contact-content">
-        <form action='mailto:personal@alexandrubrancu.com'>
+        <form id='contact-form' action='https://form.taxi/s/4rpqs78m' target='_blank' method='POST'>
           <div className="form">
-            <input name='name' type="text" className="text-input name-input" placeholder="Name/Nickname"/>
-            <textarea name='message' className="text-input body-input" placeholder="Type here.."/>
-            <button className="cta" id="submit-button">Submit</button>
+            <input name='Name' type="text" className="text-input name-input" placeholder="Name/Nickname" required/>
+            <textarea name='Message' className="text-input body-input" placeholder="Type here.." required/>
+            <button name='Submit' type='submit' className="cta" id="submit-button" onClick={() => {
+              setTimeout(() => {
+                let nameFieldLength = document.body.getElementsByClassName('name-input')[0].value.length;
+                let messageFieldLength = document.body.getElementsByClassName('body-input')[0].value.length;
+                if (nameFieldLength > 0 && messageFieldLength > 0) {
+                  document.body.getElementsByClassName('name-input')[0].value = '';
+                  document.body.getElementsByClassName('body-input')[0].value = '';
+                }
+              }, 100);
+            }}>Submit</button>
           </div>
         </form>
         <div className="links">

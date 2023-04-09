@@ -4,42 +4,51 @@ import ProjectMenuSection from './ProjectMenuSection';
 const ProjectMenu = (props) => {
   const [activeSection, setActiveSection] = useState(0);
   const themeColors = {
-    dark: "#a203f8",
-    light: "#039ef8"
+    dark: {
+      highlight: "#a203f8",
+      normal: "white"
+    },
+    light: {
+      highlight: "#039ef8",
+      normal: "black"
+    }
   };
-  const [highlightColor, setHighlightColor] = useState("white");
+  const [highlightColor, setHighlightColor] = useState();
+  const [normalColor, setNormalColor] = useState();
   const [colors, setColors] = useState({
     photos: highlightColor,
-    technology: "white",
-    caseStudy: "white"
+    technology: normalColor,
+    caseStudy: normalColor
   });
   const changeColor = (section) => {
     if (section === 2) {
       setColors({
-        photos: "white",
-        technology: "white",
+        photos: normalColor,
+        technology: normalColor,
         caseStudy: highlightColor
       });
     } else if (section === 1) {
       setColors({
-        photos: "white",
+        photos: normalColor,
         technology: highlightColor,
-        caseStudy: "white"
+        caseStudy: normalColor
       });
     } else {
       setColors({
         photos: highlightColor,
-        technology: "white",
-        caseStudy: "white"
+        technology: normalColor,
+        caseStudy: normalColor
       });
     }
   }
   useEffect(() => {
     if (props.theme === 'dark') {
-      setHighlightColor(themeColors.dark);
+      setHighlightColor(themeColors.dark.highlight);
+      setNormalColor(themeColors.dark.normal)
       changeColor(activeSection);
     } else {
-      setHighlightColor(themeColors.light);
+      setHighlightColor(themeColors.light.highlight);
+      setNormalColor(themeColors.light.normal)
       changeColor(activeSection);
     }
   }, [props.theme, highlightColor])
@@ -48,6 +57,7 @@ const ProjectMenu = (props) => {
       document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
       document.body.style = "overflow: visible";
       document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: block";
+      props.toggleMenu();
       setActiveSection(0);
       changeColor(0);
     }}>
@@ -81,12 +91,12 @@ const ProjectMenu = (props) => {
             </a>
           </div>
           <a className="close-menu-button" onClick={() => {
-            props.toggleMenu();
-            setActiveSection(0);
-            changeColor(0);
             document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
             document.body.style = "overflow: visible";
             document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: block";
+            props.toggleMenu();
+            setActiveSection(0);
+            changeColor(0);
             setActiveSection(0);
             changeColor(0);
           }}>
