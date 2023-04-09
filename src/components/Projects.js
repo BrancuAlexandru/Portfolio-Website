@@ -1,24 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ProjectMenu from './carousel/ProjectMenu'
 
 const Projects = (props) => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState();
   const [menuIsActive, setMenuIsActive] = useState(false);
-  const [highlightColor, setHighlightColor] = useState();
+  
   const toggleMenu = () => {
     setMenuIsActive(!menuIsActive);
   }
   const showProjectMenuWrapper = () => {
     document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: block";
     document.body.style = "overflow: hidden";
+    document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: none";
   }
-  useEffect(() => {
-    if (props.theme === 'dark') {
-      setHighlightColor("#a203f8");
-    } else {
-      setHighlightColor("#039ef8");
-    }
-  }, [props.theme])
   return (
     <section className="Projects" id="Projects">
       <h1>Projects</h1>
@@ -58,7 +52,7 @@ const Projects = (props) => {
         <BottomSquares />
         <div className="film-backside"></div>
       </div>
-      <ProjectMenu selectedProjectIndex={selectedProjectIndex} menuIsActive={menuIsActive} toggleMenu={toggleMenu} theme={props.theme} highlightColor={highlightColor}/>
+      <ProjectMenu selectedProjectIndex={selectedProjectIndex} menuIsActive={menuIsActive} toggleMenu={toggleMenu} theme={props.theme}/>
     </section>
   );
 }

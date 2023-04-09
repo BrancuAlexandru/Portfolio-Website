@@ -1,38 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectMenuSection from './ProjectMenuSection';
 
 const ProjectMenu = (props) => {
   const [activeSection, setActiveSection] = useState(0);
+  const themeColors = {
+    dark: "#a203f8",
+    light: "#039ef8"
+  };
+  const [highlightColor, setHighlightColor] = useState("white");
   const [colors, setColors] = useState({
-    photos: "#a203f8"/* "#a203f8" */,
+    photos: highlightColor,
     technology: "white",
     caseStudy: "white"
   });
-  const changeColor = (section) => { // section might be undefined?
+  const changeColor = (section) => {
     if (section === 2) {
       setColors({
         photos: "white",
         technology: "white",
-        caseStudy: props.highlightColor
+        caseStudy: highlightColor
       });
     } else if (section === 1) {
       setColors({
         photos: "white",
-        technology: props.highlightColor,
+        technology: highlightColor,
         caseStudy: "white"
       });
     } else {
       setColors({
-        photos: props.highlightColor,
+        photos: highlightColor,
         technology: "white",
         caseStudy: "white"
       });
     }
   }
+  useEffect(() => {
+    if (props.theme === 'dark') {
+      setHighlightColor(themeColors.dark);
+      changeColor(activeSection);
+    } else {
+      setHighlightColor(themeColors.light);
+      changeColor(activeSection);
+    }
+  }, [props.theme, []])
   return (
-    <div className='project-menu-wrapper' style={{display: 'none'}}>
+    <div className='project-menu-wrapper' style={{display: 'none'}} onClick={() => {
+      document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
+      document.body.style = "overflow: visible";
+      document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: block";
+      setActiveSection(0);
+      changeColor(0);
+    }}>
       { props.menuIsActive &&
-      <div className="project-menu">
+      <div className="project-menu" onClick={(e) => {e.stopPropagation()}}>
         <div className="project-menu-top">
           <div className="project-menu-section-button cta">
             <a onClick={() => {
@@ -64,8 +84,11 @@ const ProjectMenu = (props) => {
             props.toggleMenu();
             setActiveSection(0);
             changeColor(0);
-            document.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
+            document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
             document.body.style = "overflow: visible";
+            document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: block";
+            setActiveSection(0);
+            changeColor(0);
           }}>
           </a>
         </div>

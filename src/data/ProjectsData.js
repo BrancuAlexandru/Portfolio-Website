@@ -42,6 +42,9 @@ const projectsData = [
           learned: 'How to work with routes'
         },
       ]
+    },
+    link: {
+      URL: 'https://github.com/BrancuAlexandru/Authentication-App'
     }
   },
   {
@@ -94,6 +97,9 @@ const projectsData = [
           learned: 'Inline svg is better than svg in file form because it can easily be edited'
         }
       ]
+    },
+    link: {
+      URL: 'https://alexandrubrancu.com'
     }
   },
   {
@@ -129,6 +135,9 @@ const projectsData = [
           learned: 'Unloading scripts is extremely difficult if not impossible in some contexts'
         }
       ]
+    },
+    link: {
+      URL: 'https://chrome.google.com/webstore/detail/gamefinder/jlgipnmimogpomfpobemgdddbfnkkdbp'
     }
   }
 ];

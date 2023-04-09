@@ -41,6 +41,7 @@ const PhotosSection = (props) => {
           <h2>{currentPageData.title}</h2>
           <p className="body-text">{currentPageData.body}</p>
           <p className="made-in-text">{currentPageData.madeIn}</p>
+          <a className="project-link" href={projectsData[props.selectedProjectIndex].link.URL} target='_blank'>Project Link</a>
         </div>
         <div className="page-number">
           { projectsData[props.selectedProjectIndex].photos.pages.length > 1 &&

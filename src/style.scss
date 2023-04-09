@@ -372,6 +372,7 @@ a {
     top: 0;
     left: 0;
     position: fixed;
+    cursor: pointer;
     &::before {
       content: '';
       top: 0;
@@ -391,6 +392,7 @@ a {
     top: 10%;
     left: 10.88%;
     border-radius: 10px;
+    cursor: default;
     .project-menu-top {
       width: 100%;
       height: 10%;
@@ -507,23 +509,25 @@ a {
             right: 0;
             top: 0;
             position: absolute;
-            background-color: #444444;
             width: 340px;
             height: 480px;
             animation: fadeInFromBottom 0.4s ease;
             h2 {
-              color: white;
               margin: 35px 0 15px 20px;
             }
             .body-text {
-              color: white;
               margin-left: 20px;
             }
             .made-in-text {
-              color: white;
               font-weight: 600;
               margin-left: 20px;
               margin-top: 30px;
+            }
+            .project-link {
+              margin-left: 20px;
+              max-width: max-content;
+              position: absolute;
+              bottom: 5%; 
             }
           }
         }
@@ -1001,7 +1005,7 @@ $darker-purple: #7426bd;
               .left-arrow,
               .right-arrow {
                 svg {
-                  fill: $purple;
+                  fill: #ffffff;
                 }
               }
             }
@@ -1016,6 +1020,10 @@ $darker-purple: #7426bd;
               .made-in-text {
                 color: white;
                 text-shadow: 1px 1px $dark-purple;
+              }
+              .project-link {
+                color: $purple;
+                text-shadow: 2px 2px #212121;
               }
             }
           }
@@ -1435,7 +1443,7 @@ $darker-blue: #0c7fc2;
               .left-arrow,
               .right-arrow {
                 svg {
-                  fill: $blue;
+                  fill: #ffffff;
                 }
               }
             }
@@ -1450,6 +1458,10 @@ $darker-blue: #0c7fc2;
               .made-in-text {
                 color: white;
                 text-shadow: 1px 1px $blue;
+              }
+              .project-link {
+                color: $blue;
+                text-shadow: 2px 2px #212121;
               }
             }
           }
