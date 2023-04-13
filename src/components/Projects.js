@@ -9,7 +9,7 @@ const Projects = (props) => {
     setMenuIsActive(!menuIsActive);
   }
   const showProjectMenuWrapper = () => {
-    document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: block";
+    document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: flex";
     document.body.style = "overflow: hidden";
     document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: none";
   }
@@ -78,7 +78,7 @@ const TopSquares = () => {
     );
   }
   return (
-    <div>
+    <div className="film-square-strip-container">
       {makeSquares(32)}
     </div>
   );
@@ -105,7 +105,7 @@ const BottomSquares = () => {
     );
   }
   return (
-    <div>
+    <div className="film-square-strip-container">
       {makeSquares(32)}
     </div>
   );
