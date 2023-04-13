@@ -36,7 +36,7 @@ const ProjectMenu = (props) => {
     } else {
       setColors({
         photos: highlightColor,
-        technology: normalColor,
+        technology: normalColor,  
         caseStudy: normalColor
       });
     }
@@ -56,7 +56,7 @@ const ProjectMenu = (props) => {
     <div className='project-menu-wrapper' style={{display: 'none'}} onClick={() => {
       document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
       document.body.style = "overflow: visible";
-      document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: block";
+      document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: flex";
       props.toggleMenu();
       setActiveSection(0);
       changeColor(0);
@@ -93,7 +93,7 @@ const ProjectMenu = (props) => {
           <a className="close-menu-button" onClick={() => {
             document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
             document.body.style = "overflow: visible";
-            document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: block";
+            document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: flex";
             props.toggleMenu();
             setActiveSection(0);
             changeColor(0);
