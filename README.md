@@ -5,9 +5,7 @@ https://alexandrubrancu.com
 
 This is a website I designed, coded and programmed myself, hosted with Firebase.
 
-Technology used:
-
-  Front End:
+  Technologies:
    - React
    - SCSS
    - Babel.js
