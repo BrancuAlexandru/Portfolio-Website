@@ -7,13 +7,9 @@ Technology used:
 
   Front End:
    - React
+   - SCSS
    - Babel.js
    - Webpack
-   - SCSS
-   - npm
-
-  Back End:
-   - Firebase
 
   Design:
    - Adobe Photoshop CC
