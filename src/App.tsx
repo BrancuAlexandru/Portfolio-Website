@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, FC } from "react";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,7 +9,11 @@ import BackToTopArrow from './components/BackToTopArrow';
 import Credits from "./components/Credits";
 import './style.scss';
 
-const App = (props) => {
+type themePropType = {
+  theme: string;
+}
+
+const App:FC<themePropType> = (props) => {
   const [theme, setTheme] = useState(props.theme);
   const toggleTheme = () => {
     if (theme === 'light') {

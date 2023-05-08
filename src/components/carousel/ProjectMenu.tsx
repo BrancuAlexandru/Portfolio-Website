@@ -1,7 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import ProjectMenuSection from './ProjectMenuSection';
 
-const ProjectMenu = (props) => {
+type propsTypes = {
+  theme: string;
+  toggleMenu: Function;
+  menuIsActive: boolean;
+  selectedProjectIndex: number;
+}
+
+const ProjectMenu:FC<propsTypes> = (props) => {
   const [activeSection, setActiveSection] = useState(0);
   const themeColors = {
     dark: {
@@ -13,14 +20,14 @@ const ProjectMenu = (props) => {
       normal: "black"
     }
   };
-  const [highlightColor, setHighlightColor] = useState();
-  const [normalColor, setNormalColor] = useState();
+  const [highlightColor, setHighlightColor] = useState('');
+  const [normalColor, setNormalColor] = useState('');
   const [colors, setColors] = useState({
     photos: highlightColor,
     technology: normalColor,
     caseStudy: normalColor
   });
-  const changeColor = (section) => {
+  const changeColor = (section:number) => {
     if (section === 2) {
       setColors({
         photos: normalColor,
@@ -54,9 +61,9 @@ const ProjectMenu = (props) => {
   }, [props.theme, highlightColor])
   return (
     <div className='project-menu-wrapper' style={{display: 'none'}} onClick={() => {
-      document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
-      document.body.style = "overflow: visible";
-      document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: flex";
+      document.body.getElementsByClassName("project-menu-wrapper")[0].setAttribute("style", "display: none");
+      document.body.setAttribute("style", "overflow: visible");
+      document.body.getElementsByClassName('back-to-top-arrow')[0].setAttribute("style", "display: flex");
       props.toggleMenu();
       setActiveSection(0);
       changeColor(0);
@@ -91,9 +98,9 @@ const ProjectMenu = (props) => {
             </a>
           </div>
           <a className="close-menu-button" onClick={() => {
-            document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: none";
-            document.body.style = "overflow: visible";
-            document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: flex";
+            document.body.getElementsByClassName("project-menu-wrapper")[0].setAttribute("style", "display: none");
+            document.body.setAttribute("style", "overflow: visible");
+            document.body.getElementsByClassName('back-to-top-arrow')[0].setAttribute("style", "display: flex");
             props.toggleMenu();
             setActiveSection(0);
             changeColor(0);

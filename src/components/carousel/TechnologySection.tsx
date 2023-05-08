@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import projectsData from '../../data/ProjectsData';
 
-const TechnologySection = (props) => {
+type selectedProjectIndexTypes = {
+  selectedProjectIndex: number;
+}
+
+const TechnologySection:FC<selectedProjectIndexTypes> = (props) => {
   return (
     <div className="project-menu-technology-section">
       <div className="technology-wrapper">
@@ -10,7 +14,7 @@ const TechnologySection = (props) => {
         </div>
         <div className="technology-bottom">
           <div className="skills-wrapper">
-            {projectsData[props.selectedProjectIndex].technology.skills.map((skill, id) => {
+            {projectsData[props.selectedProjectIndex].technology.skills.map((skill:string, id:number) => {
               return (
                 <h3 key={id} className="technology-skill">{skill}</h3>
               )

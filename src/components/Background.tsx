@@ -1,6 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 
-const Background = (props) => {
+type themePropType = {
+  theme: string;
+}
+
+type selectedThemeType = {
+  firstColor?: string;
+  middleColor?: string;
+  lastColor?: string;
+}
+
+const Background:FC<themePropType> = (props) => {
   const themes = [
     {
       firstColor: '#f0f0f0',
@@ -13,7 +23,7 @@ const Background = (props) => {
       lastColor: '#4f4f54'
     }
   ];
-  let [selectedTheme, setSelectedTheme] = useState([]);
+  let [selectedTheme, setSelectedTheme] = useState<selectedThemeType>({});
   const svgSize = {
     width: 1600,
     height: 2930
