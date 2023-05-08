@@ -3,8 +3,6 @@ dist/
 firebase.json
 .firebaserc
 database.rules.json
-package-lock.json
-package.json
 storage.rules
 public/firebase.js
 .firebase/
