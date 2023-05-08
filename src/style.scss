@@ -2033,6 +2033,12 @@ $darker-blue: #0c7fc2;
       }
     }
   }
+  .dark .Projects .photos-section-text {
+    border-top: 5px solid $purple;
+  }
+  .light .Projects .photos-section-text {
+    border-top: 5px solid $blue;
+  }
   .Projects {
     h1 {
       font-size: 54px;
@@ -2076,7 +2082,6 @@ $darker-blue: #0c7fc2;
                 height: max-content;
                 margin-bottom: 20px;
                 margin-top: 14px;
-                border-top: 5px solid #862ed8;
                 border-left: none;
                 .made-in-text {
                   margin-top: 10px;
