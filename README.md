@@ -7,6 +7,7 @@ This is a website I designed, coded and programmed myself, hosted with Firebase.
 
   Technologies:
    - React
+   - TypeScript
    - SCSS
    - Babel.js
    - Webpack
