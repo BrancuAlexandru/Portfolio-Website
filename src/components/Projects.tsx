@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
-import ProjectMenu from './carousel/ProjectMenu'
+import React, { FC, useState } from 'react';
+import ProjectMenu from './carousel/ProjectMenu';
 
-const Projects = (props) => {
-  const [selectedProjectIndex, setSelectedProjectIndex] = useState();
-  const [menuIsActive, setMenuIsActive] = useState(false);
+type projectsValuesTypes = {
+  theme: string;
+}
+
+const Projects:FC<projectsValuesTypes> = (props) => {
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const [menuIsActive, setMenuIsActive] = useState<boolean>(false);
   
   const toggleMenu = () => {
     setMenuIsActive(!menuIsActive);
   }
   const showProjectMenuWrapper = () => {
-    document.body.getElementsByClassName("project-menu-wrapper")[0].style = "display: flex";
-    document.body.style = "overflow: hidden";
-    document.body.getElementsByClassName('back-to-top-arrow')[0].style = "display: none";
+    document.body.getElementsByClassName("project-menu-wrapper")[0].setAttribute("style", "display: flex");
+    document.body.setAttribute("style", "overflow: hidden");
+    document.body.getElementsByClassName('back-to-top-arrow')[0].setAttribute("style", "display: none");
   }
   return (
     <section className="Projects" id="Projects">
@@ -58,13 +62,13 @@ const Projects = (props) => {
 }
 
 const TopSquares = () => {
-  const makeOneSquare = (key) => {
+  const makeOneSquare = (key:number) => {
     return (
       <div className="Square" key={key}></div>
     );
   }
   // Returning n number of 'Square' divs with unique keys (i) into an array mapped inside 'TopSquares'
-  const makeSquares = (n) => {
+  const makeSquares = (n:number) => {
     let squareArray = [];
     for (let i = 0; i < n; i++) {
       squareArray[i] = makeOneSquare(i);
@@ -85,13 +89,13 @@ const TopSquares = () => {
 }
 
 const BottomSquares = () => {
-  const makeOneSquare = (key) => {
+  const makeOneSquare = (key: number) => {
     return (
       <div className="Square" key={key}></div>
     );
   }
   // Returning n number of 'Square' divs with unique keys (i) into an array mapped inside 'BottomSquares'
-  const makeSquares = (n) => {
+  const makeSquares = (n: number) => {
     let squareArray = [];
     for (let i = 0; i < n; i++) {
       squareArray[i] = makeOneSquare(i);

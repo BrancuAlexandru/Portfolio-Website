@@ -1,7 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import projectsData from '../../data/ProjectsData';
 
-const CaseStudySection = (props) => {
+type caseStudyPropsTypes = {
+  selectedProjectIndex: number;
+  theme: string;
+}
+
+type bubblePropsTypes = {
+  id: number;
+  theme: string;
+  currentPageNumber: number;
+  selectedProjectIndex: number;
+}
+
+const CaseStudySection:FC<caseStudyPropsTypes> = (props) => {
   const [currentPageNumber, setCurrentPageNumber] = useState(0);
   const highestPageIndex = projectsData[props.selectedProjectIndex].caseStudy.pages.length - 1;
   const currentPageData = projectsData[props.selectedProjectIndex].caseStudy.pages[currentPageNumber];
@@ -60,7 +72,7 @@ const CaseStudySection = (props) => {
   )
 }
 
-const Bubble = (props) => {
+const Bubble:FC<bubblePropsTypes> = (props) => {
   const [activeColor, setActiveColor] = useState(props.theme === 'dark' ? '#a203f8' : '#039ef8');
   let defaultColor = "#a5a5a5";
   let id = props.id;

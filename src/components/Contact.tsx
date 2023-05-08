@@ -11,11 +11,11 @@ const Contact = () => {
             <textarea name='Message' className="text-input body-input" placeholder="Type here.." required/>
             <button name='Submit' type='submit' className="cta" id="submit-button" onClick={() => {
               setTimeout(() => {
-                let nameFieldLength = document.body.getElementsByClassName('name-input')[0].value.length;
-                let messageFieldLength = document.body.getElementsByClassName('body-input')[0].value.length;
+                let nameFieldLength = (document.body.getElementsByClassName('name-input')[0] as HTMLInputElement).value.length;
+                let messageFieldLength = (document.body.getElementsByClassName('body-input')[0] as HTMLInputElement).value.length;
                 if (nameFieldLength > 0 && messageFieldLength > 0) {
-                  document.body.getElementsByClassName('name-input')[0].value = '';
-                  document.body.getElementsByClassName('body-input')[0].value = '';
+                  (document.body.getElementsByClassName('name-input')[0] as HTMLInputElement).value = '';
+                  (document.body.getElementsByClassName('body-input')[0] as HTMLInputElement).value = '';
                 }
               }, 100);
             }}>Submit</button>

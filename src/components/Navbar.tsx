@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const Navbar = (props) => {
+type themePropType = {
+  theme: string;
+  toggleTheme: Function;
+}
+
+const Navbar:FC<themePropType> = (props) => {
   return (
     <section className="Navbar" id="Navbar">
       <h2 className="name">Brancu Alexandru</h2>
@@ -11,7 +16,7 @@ const Navbar = (props) => {
   );
 }
 
-const ThemeSwitch = (props) => {
+const ThemeSwitch:FC<themePropType> = (props) => {
   return (
     <div className="theme-switch" onClick={() => props.toggleTheme()}>
       <a className="theme-switch-button">

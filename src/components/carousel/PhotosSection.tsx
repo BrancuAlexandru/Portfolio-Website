@@ -1,7 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, FC } from 'react';
 import projectsData from '../../data/ProjectsData';
 
-const PhotosSection = (props) => {
+type photoSectionPropsTypes = {
+  selectedProjectIndex: number;
+  theme: string;
+}
+
+type bubblePropsTypes = {
+  theme: string;
+  currentPageNumber: number;
+  id: number;
+}
+
+const PhotosSection:FC<photoSectionPropsTypes> = (props) => {
   const [currentPageNumber, setCurrentPageNumber] = useState(0);
   const highestPageIndex = projectsData[props.selectedProjectIndex].photos.pages.length - 1;
   const currentPageData = projectsData[props.selectedProjectIndex].photos.pages[currentPageNumber];
@@ -45,7 +56,7 @@ const PhotosSection = (props) => {
         </div>
         <div className="page-number">
           { projectsData[props.selectedProjectIndex].photos.pages.length > 1 &&
-          projectsData[props.selectedProjectIndex].photos.pages.map((item, id) => {
+          projectsData[props.selectedProjectIndex].photos.pages.map((item, id:number) => {
             return (
               <Bubble key={id} id={id} currentPageNumber={currentPageNumber} theme={props.theme}/>
             )
@@ -56,10 +67,10 @@ const PhotosSection = (props) => {
   )
 }
 
-const Bubble = (props) => {
+const Bubble:FC<bubblePropsTypes> = (props) => {
   const [activeColor, setActiveColor] = useState(props.theme === 'dark' ? '#a203f8' : '#039ef8');
   let defaultColor = "#a5a5a5";
-  let id = props.id;
+  let idNumber = props.id;
   useEffect(() => {
     if (props.theme === 'dark') {
       setActiveColor("#a203f8");
@@ -69,11 +80,11 @@ const Bubble = (props) => {
   }, [props.theme])
   return (
     <div className="bubble-parent">
-      {id === props.currentPageNumber && 
-        <div className="photos-bubble" id={props.id} style={{backgroundColor: activeColor, width: "9px", height: "9px"}}></div>
+      {idNumber === props.currentPageNumber && 
+        <div className="photos-bubble" id={idNumber} style={{backgroundColor: activeColor, width: "9px", height: "9px"}}></div>
       }
-      {id != props.currentPageNumber && 
-        <div className="photos-bubble" id={props.id} style={{backgroundColor: defaultColor}}></div>
+      {idNumber != props.currentPageNumber && 
+        <div className="photos-bubble" id={idNumber} style={{backgroundColor: defaultColor}}></div>
       }
     </div>
   )

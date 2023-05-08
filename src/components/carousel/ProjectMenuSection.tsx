@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
 import PhotosSection from './PhotosSection';
 import TechnologySection from './TechnologySection';
 import CaseStudySection from './CaseStudySection';
 
-const ProjectMenuSection = (props) => {
+type sectionValueAndPropsTypes = {
+  activeSection: number;
+  selectedProjectIndex: number;
+  theme: string;
+}
+
+const ProjectMenuSection:FC<sectionValueAndPropsTypes> = (props) => {
   return (
     <div>
       {props.activeSection === 2 &&
