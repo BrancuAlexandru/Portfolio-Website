@@ -75,6 +75,7 @@ const projectsData = [
       skills: [
         'React',
         'JavaScript',
+        'Typescript',
         'HTML',
         'SCSS',
         'Firebase',
