@@ -44,6 +44,8 @@
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.1",
     "ts-loader": "^9.4.2"
   }
 }
