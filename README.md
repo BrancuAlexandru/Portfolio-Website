@@ -4,6 +4,7 @@ This is my portfolio website. I designed and coded it myself.
 
 ### Technologies
  - React
+ - Redux
  - TypeScript
  - SCSS
  - Babel.js
