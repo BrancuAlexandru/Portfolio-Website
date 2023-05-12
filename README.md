@@ -1,15 +1,13 @@
-# Portfolio-Website
-
-https://alexandrubrancu.com
+# [Portfolio-Website](https://alexandrubrancu.com)
 
 This is my portfolio website. I designed and coded it myself, hosted with Firebase.
 
-Technologies:
+### Technologies:
  - React
  - TypeScript
  - SCSS
  - Babel.js
  - Webpack
 
-Design:
+### Design:
  - Adobe Photoshop CC
