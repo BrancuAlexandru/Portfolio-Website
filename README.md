@@ -1,5 +1,4 @@
 # Portfolio-Website
-My portfolio website.
 
 https://alexandrubrancu.com
 
