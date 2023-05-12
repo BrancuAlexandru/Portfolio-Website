@@ -38,6 +38,7 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/svg-tags": "^1.0.0",
     "dart-sass": "^1.25.0",
     "firebase": "^9.18.0",
