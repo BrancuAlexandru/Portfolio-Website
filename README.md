@@ -3,14 +3,14 @@ My portfolio website.
 
 https://alexandrubrancu.com
 
-This is a website I designed, coded and programmed myself, hosted with Firebase.
+This is my portfolio website. I designed and coded it myself, hosted with Firebase.
 
-  Technologies:
-   - React
-   - TypeScript
-   - SCSS
-   - Babel.js
-   - Webpack
+Technologies:
+ - React
+ - TypeScript
+ - SCSS
+ - Babel.js
+ - Webpack
 
-  Design:
-   - Adobe Photoshop CC
+Design:
+ - Adobe Photoshop CC
