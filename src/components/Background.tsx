@@ -1,8 +1,5 @@
-import React, { useState, useEffect, FC } from 'react';
-
-type themePropType = {
-  theme: string;
-}
+import { useState, useEffect, FC, useContext } from 'react';
+import { themeContext } from '../index';
 
 type selectedThemeType = {
   firstColor?: string;
@@ -10,7 +7,8 @@ type selectedThemeType = {
   lastColor?: string;
 }
 
-const Background:FC<themePropType> = (props) => {
+const Background:FC = () => {
+  let theme = useContext(themeContext);
   const themes = [
     {
       firstColor: '#f0f0f0',
@@ -29,12 +27,12 @@ const Background:FC<themePropType> = (props) => {
     height: 2930
   }
   useEffect(() => {
-    if (props.theme === 'dark') {
+    if (theme === 'dark') {
       setSelectedTheme(themes[1]);
     } else {
       setSelectedTheme(themes[0]);
     }
-  }, [props.theme])
+  }, [theme])
   return (
     <div className="Background">
       <svg xmlns="http://www.w3.org/2000/svg" width={svgSize.width} height={svgSize.height} viewBox={`0 0 ${svgSize.width} ${svgSize.height}`}>

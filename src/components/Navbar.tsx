@@ -1,26 +1,23 @@
-import React, { FC } from 'react';
+import { FC, useContext } from 'react';
+import { themeContext } from '../index';
 
-type themePropType = {
-  theme: string;
-  toggleTheme: Function;
-}
-
-const Navbar:FC<themePropType> = (props) => {
+const Navbar:FC = () => {
   return (
     <section className="Navbar" id="Navbar">
       <h2 className="name">Brancu Alexandru</h2>
-      <ThemeSwitch theme={props.theme} toggleTheme={props.toggleTheme}/>
+      <ThemeSwitch />
       <a className="projects-button cta" href="#Projects">PROJECTS</a>
       <a className="contact-button cta" href="#Contact">CONTACT</a>
     </section>
   );
 }
 
-const ThemeSwitch:FC<themePropType> = (props) => {
+const ThemeSwitch:FC = () => {
+  const theme = useContext(themeContext);
   return (
-    <div className="theme-switch" onClick={() => props.toggleTheme()}>
+    <div className="theme-switch" onClick={() => {}}>
       <a className="theme-switch-button">
-        {props.theme === 'dark' &&
+        {theme === 'dark' &&
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50px" height="50px" viewBox="0 -4 50 50">
             <path fill="#a203f8" d="
             M46.369,28.793c-11.852,5.935-26.271,1.138-32.206-10.714
@@ -30,7 +27,7 @@ const ThemeSwitch:FC<themePropType> = (props) => {
             "/>
           </svg>
         }
-        {props.theme === 'light' &&
+        {theme === 'light' &&
           <svg width="50px" height="50px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <circle cx="50" cy="50" r="50" fill="#039ef8"/>
           </svg>

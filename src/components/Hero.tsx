@@ -1,10 +1,8 @@
-import React, { FC } from 'react';
+import { FC, useContext } from 'react';
+import { themeContext } from '../index';
 
-type themePropType = {
-  theme: string;
-}
-
-const Hero:FC<themePropType> = (props) => {
+const Hero:FC = () => {
+  let theme = useContext(themeContext);
   return (
     <section className="Hero">
       <div className="gradient">
@@ -18,10 +16,10 @@ const Hero:FC<themePropType> = (props) => {
             <div className="shadow">
               <CharacterShadow />
             </div>
-            { props.theme === 'light' &&
+            { theme === 'light' &&
               <CharacterLightTheme />
             }
-            { props.theme === 'dark' &&
+            { theme === 'dark' &&
               <CharacterDarkTheme />
             }
           </div>

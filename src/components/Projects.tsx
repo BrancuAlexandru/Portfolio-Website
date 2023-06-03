@@ -1,11 +1,7 @@
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 import ProjectMenu from './carousel/ProjectMenu';
 
-type projectsValuesTypes = {
-  theme: string;
-}
-
-const Projects:FC<projectsValuesTypes> = (props) => {
+const Projects:FC = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
   const [menuIsActive, setMenuIsActive] = useState<boolean>(false);
   
@@ -56,7 +52,7 @@ const Projects:FC<projectsValuesTypes> = (props) => {
         <BottomSquares />
         <div className="film-backside"></div>
       </div>
-      <ProjectMenu selectedProjectIndex={selectedProjectIndex} menuIsActive={menuIsActive} toggleMenu={toggleMenu} theme={props.theme}/>
+      <ProjectMenu selectedProjectIndex={selectedProjectIndex} menuIsActive={menuIsActive} toggleMenu={toggleMenu} />
     </section>
   );
 }

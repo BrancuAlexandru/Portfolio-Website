@@ -1,14 +1,13 @@
-import React, { useState, useEffect, FC } from 'react';
+import { useState, useEffect, FC, useContext } from 'react';
 import projectsData from '../../data/ProjectsData';
+import { themeContext } from '../../index';
 
 type caseStudyPropsTypes = {
   selectedProjectIndex: number;
-  theme: string;
 }
 
 type bubblePropsTypes = {
   id: number;
-  theme: string;
   currentPageNumber: number;
   selectedProjectIndex: number;
 }
@@ -63,7 +62,7 @@ const CaseStudySection:FC<caseStudyPropsTypes> = (props) => {
         <div className="page-number">
           {projectsData[props.selectedProjectIndex].caseStudy.pages.map((item, id) => {
             return (
-              <Bubble key={id} id={id} currentPageNumber={currentPageNumber} selectedProjectIndex={props.selectedProjectIndex} theme={props.theme}/>
+              <Bubble key={id} id={id} currentPageNumber={currentPageNumber} selectedProjectIndex={props.selectedProjectIndex} />
             )
           })}
         </div>
@@ -73,16 +72,17 @@ const CaseStudySection:FC<caseStudyPropsTypes> = (props) => {
 }
 
 const Bubble:FC<bubblePropsTypes> = (props) => {
-  const [activeColor, setActiveColor] = useState(props.theme === 'dark' ? '#a203f8' : '#039ef8');
+  let theme = useContext(themeContext);
+  const [activeColor, setActiveColor] = useState(theme === 'dark' ? '#a203f8' : '#039ef8');
   let defaultColor = "#a5a5a5";
   let id = props.id;
   useEffect(() => {
-    if (props.theme === 'dark') {
+    if (theme === 'dark') {
       setActiveColor("#a203f8");
     } else {
       setActiveColor("#039ef8");
     }
-  }, [props.theme])
+  }, [theme])
   return (
     <div className="bubble-parent">
       {id === props.currentPageNumber && projectsData[props.selectedProjectIndex].caseStudy.pages.length > 1 &&

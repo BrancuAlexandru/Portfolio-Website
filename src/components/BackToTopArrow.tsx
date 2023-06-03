@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // When scroll is below a value, render an arrow to go back to top
 const BackToTopArrow = () => {

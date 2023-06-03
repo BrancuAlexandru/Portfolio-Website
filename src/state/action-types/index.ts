@@ -1,7 +1,0 @@
-enum ActionTypes {
-  CLOSE_PROJECT_MENU = 'CLOSE_PROJECT_MENU',
-  OPEN_PROJECT_MENU = 'OPEN_PROJECT_MENU',
-  TOGGLE_THEME = 'TOGGLE_THEME'
-}
-
-export default ActionTypes;

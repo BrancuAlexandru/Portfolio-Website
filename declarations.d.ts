@@ -6,7 +6,7 @@ declare namespace JSX {
     extends React.DetailedHTMLProps<
       React.HTMLAttributes<HTMLDivElement>,
       HTMLDivElement> {
-        theme?: string;
+        theme?: string | void;
   }
 
   interface IntrinsicElements {

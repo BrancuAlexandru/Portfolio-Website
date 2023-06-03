@@ -1,4 +1,5 @@
-import React, { useState, FC } from "react";
+import { FC, useContext } from "react";
+import { themeContext } from "./index";
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,28 +10,17 @@ import BackToTopArrow from './components/BackToTopArrow';
 import Credits from "./components/Credits";
 import './style.scss';
 
-type themePropType = {
-  theme: string;
-}
-
-const App:FC<themePropType> = (props) => {
-  const [theme, setTheme] = useState(props.theme);
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  }
+const App:FC = () => {
+  const theme = useContext(themeContext);
   return (
     <div className={theme} theme={theme}>
       <div className="App">
-        <Background theme={theme}/>
+        <Background />
         <BackToTopArrow />
-        <Navbar theme={theme} toggleTheme={toggleTheme}/>
-        <Hero theme={theme}/>
+        <Navbar />
+        <Hero />
         <About />
-        <Projects theme={theme}/>
+        <Projects />
         <Contact />
         <Credits />
       </div>

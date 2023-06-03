@@ -1,14 +1,15 @@
-import React, { useState, useEffect, FC } from 'react';
+import { useState, useEffect, FC, useContext } from 'react';
 import ProjectMenuSection from './ProjectMenuSection';
+import { themeContext } from '../../index';
 
 type propsTypes = {
-  theme: string;
-  toggleMenu: Function;
   menuIsActive: boolean;
   selectedProjectIndex: number;
+  toggleMenu: Function;
 }
 
 const ProjectMenu:FC<propsTypes> = (props) => {
+  let theme = useContext(themeContext);
   const [activeSection, setActiveSection] = useState(0);
   const themeColors = {
     dark: {
@@ -49,7 +50,7 @@ const ProjectMenu:FC<propsTypes> = (props) => {
     }
   }
   useEffect(() => {
-    if (props.theme === 'dark') {
+    if (theme === 'dark') {
       setHighlightColor(themeColors.dark.highlight);
       setNormalColor(themeColors.dark.normal)
       changeColor(activeSection);
@@ -58,7 +59,7 @@ const ProjectMenu:FC<propsTypes> = (props) => {
       setNormalColor(themeColors.light.normal)
       changeColor(activeSection);
     }
-  }, [props.theme, highlightColor])
+  }, [theme, highlightColor])
   return (
     <div className='project-menu-wrapper' style={{display: 'none'}} onClick={() => {
       document.body.getElementsByClassName("project-menu-wrapper")[0].setAttribute("style", "display: none");
@@ -124,7 +125,7 @@ const ProjectMenu:FC<propsTypes> = (props) => {
           </svg>
         </a>
         <div className="project-menu-section">
-          <ProjectMenuSection selectedProjectIndex={props.selectedProjectIndex} activeSection={activeSection} theme={props.theme}/>
+          <ProjectMenuSection selectedProjectIndex={props.selectedProjectIndex} activeSection={activeSection} />
         </div>
         <a className="project-menu-right-arrow" onClick={() => {
           if (activeSection < 2) {
