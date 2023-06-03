@@ -38,15 +38,12 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
     "@types/svg-tags": "^1.0.0",
     "dart-sass": "^1.25.0",
     "firebase": "^9.18.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^8.0.5",
-    "redux": "^4.2.1",
     "ts-loader": "^9.4.2"
   }
 }
