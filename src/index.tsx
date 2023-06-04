@@ -4,6 +4,7 @@ import App from "./App";
 import { createContext } from 'react';
 
 const isDark = window.matchMedia("(prefers-color-scheme:dark)").matches ? 'dark' : 'light';
+export const themeContext = createContext(isDark);
 
 const rootElement = document.getElementById("root") as HTMLElement;
 const root = createRoot(rootElement);
@@ -13,5 +14,3 @@ root.render(
     <App />
   </StrictMode>
 );
-
-export const themeContext = createContext(isDark);

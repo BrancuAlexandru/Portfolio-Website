@@ -1,21 +1,25 @@
 import { FC, useContext } from 'react';
 import { themeContext } from '../index';
 
-const Navbar:FC = () => {
+type toggleThemeFunctionType = {
+  toggleTheme: Function;
+}
+
+const Navbar:FC<toggleThemeFunctionType> = (props) => {
   return (
     <section className="Navbar" id="Navbar">
       <h2 className="name">Brancu Alexandru</h2>
-      <ThemeSwitch />
+      <ThemeSwitch toggleTheme={props.toggleTheme}/>
       <a className="projects-button cta" href="#Projects">PROJECTS</a>
       <a className="contact-button cta" href="#Contact">CONTACT</a>
     </section>
   );
 }
 
-const ThemeSwitch:FC = () => {
+const ThemeSwitch:FC<toggleThemeFunctionType> = (props) => {
   const theme = useContext(themeContext);
   return (
-    <div className="theme-switch" onClick={() => {}}>
+    <div className="theme-switch" onClick={() => props.toggleTheme()}>
       <a className="theme-switch-button">
         {theme === 'dark' &&
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50px" height="50px" viewBox="0 -4 50 50">
