@@ -18,17 +18,15 @@ const App:FC = () => {
   }
   return (
     <themeContext.Provider value={theme}>
-      <div className={theme} theme={theme}>
-        <div className="App">
-          <Background />
-          <BackToTopArrow />
-          <Navbar toggleTheme={toggleTheme}/>
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
-          <Credits />
-        </div>
+      <div className={`${theme} App`} theme={theme}>
+        <Background />
+        <BackToTopArrow />
+        <Navbar toggleTheme={toggleTheme}/>
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+        <Credits />
       </div>
     </themeContext.Provider>
   );
