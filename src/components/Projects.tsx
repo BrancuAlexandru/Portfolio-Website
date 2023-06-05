@@ -26,7 +26,7 @@ const Projects:FC = () => {
             showProjectMenuWrapper();
             }}>
             <div className="project-image">
-              <img src="./images/authentication.webp" alt="screenshot of the log in for the project"  loading="lazy"/>
+              <img src="./images/authentication.webp" alt="screenshot of the log in for the project" loading="lazy"/>
             </div>
           </div>
           <div className="project cta" onClick={() => {
@@ -35,7 +35,7 @@ const Projects:FC = () => {
             showProjectMenuWrapper();
             }}>
             <div className="project-image">
-              <img src="./images/landingPage.webp" alt="screenshot of the portfolio" style={{objectFit: 'cover', objectPosition: '0 0'}} loading="lazy"/>
+              <img src="./images/landingPage.webp" alt="screenshot of the portfolio" loading="lazy"/>
             </div>
           </div>
           <div className="project cta" onClick={() => {
