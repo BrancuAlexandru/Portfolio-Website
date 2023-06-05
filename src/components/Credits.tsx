@@ -29,7 +29,7 @@ const Credits = () => {
       }
       {!creditsIsOpen && 
         <div className="closed">
-          <a className="credits-button cta" onClick={() => setCreditsIsOpen(true)}>Credits</a>
+          <button className="credits-button cta" onClick={() => setCreditsIsOpen(true)}>Credits</button>
         </div>
       }
     </div>

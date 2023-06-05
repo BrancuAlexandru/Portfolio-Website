@@ -20,7 +20,7 @@ const ThemeSwitch:FC<toggleThemeFunctionType> = (props) => {
   const theme = useContext(themeContext);
   return (
     <div className="theme-switch" onClick={() => props.toggleTheme()}>
-      <a className="theme-switch-button">
+      <div className="theme-switch-button">
         {theme === 'dark' &&
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="50px" height="50px" viewBox="0 -4 50 50">
             <path fill="#a203f8" d="
@@ -36,7 +36,7 @@ const ThemeSwitch:FC<toggleThemeFunctionType> = (props) => {
             <circle cx="50" cy="50" r="50" fill="#039ef8"/>
           </svg>
         }
-      </a>
+      </div>
     </div>
   );
 }
