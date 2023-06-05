@@ -45,7 +45,7 @@ const PhotosSection:FC<photoSectionPropsTypes> = (props) => {
               </svg>
             </a>
           }
-          <img src={currentPageData.imageSrc} loading="lazy"/>
+          <img src={currentPageData.imageSrc} loading="lazy" alt={currentPageData.title}/>
         </div>
         <div className="photos-section-text">
           <h2>{currentPageData.title}</h2>
