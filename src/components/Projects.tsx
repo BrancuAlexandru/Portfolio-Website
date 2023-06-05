@@ -26,7 +26,7 @@ const Projects:FC = () => {
             showProjectMenuWrapper();
             }}>
             <div className="project-image">
-              <img src="./images/authentication.webp" alt="screenshot of the log in page"  loading="lazy"/>
+              <img src="./images/authentication.webp" alt="screenshot of the log in for the project"  loading="lazy"/>
             </div>
           </div>
           <div className="project cta" onClick={() => {
