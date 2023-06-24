@@ -3,8 +3,8 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/index.tsx",
-  mode: "production",
-  devtool: 'source-map',
+  mode: "development",
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
