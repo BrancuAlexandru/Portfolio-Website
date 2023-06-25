@@ -26,7 +26,7 @@ const Contact = () => {
             </div>
             <h2>GitHub</h2>
           </a>
-          <a className="resume-link cta" id="resume-button" href="/misc/Brancu_Alexandru_Resume.pdf">
+          <a className="resume-link cta" id="resume-button" href="/misc/Brancu_Alexandru_Resume.pdf" target="_blank">
             <div className="link-image">
               <ResumeIcon />
             </div>
