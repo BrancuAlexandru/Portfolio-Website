@@ -112,7 +112,7 @@ a {
     width: 26px;
     height: 26px;
     margin-top: 61px;
-    margin-right: 35px;
+    margin-right: 45px;
     @include flexJustifyAlign;
     &:hover {
       cursor: pointer;
@@ -233,11 +233,12 @@ a {
       border-radius: 17px;
       display: flex;
       align-items: center;
+      height: 100%;
       .about-me-paragraph {
         @include flexJustifyAlign;
         flex-direction: column;
         p {
-          max-width: 575px;
+          max-width: 438px;
           padding: 25px 50px 25px 50px;
           font-weight: 500;
           font-size: 28px;
@@ -848,16 +849,16 @@ $darker-purple: #7426bd;
 .dark {
   .section-title {
     color: #e1e1e1;
-    text-shadow: 3px 3px #747474;
+    text-shadow: 3px 3px #cecece;
   }
   .back-to-top-arrow {
-    background-color: #aaaaaa;
-    box-shadow: 2px 2px #000000;
+    background-color: $purple;
+    box-shadow: 2px 2px #550381;
     svg {
-      fill: $purple;
+      fill: #fff;
     }
     &:hover {
-      background-color: #bdbdbd;
+      background-color: #fff;
       box-shadow: 2px 2px #474747;
       svg {
         fill: $purple;
@@ -872,14 +873,6 @@ $darker-purple: #7426bd;
     .name {
       color: #dadada;
       text-shadow: 1px 1px #797979;
-    }
-    .theme-switch {
-      .theme-switch-button {
-        svg {
-          border-radius: 50%;
-          border: 2px solid #fff;
-        }
-      }
     }
     .projects-button {
       color: #dadada;
@@ -1160,6 +1153,7 @@ $darker-purple: #7426bd;
           .link-image {
             svg {
               fill: #dddddd;
+              filter: drop-shadow(2px 2px $purple);
             }
           }
           &:hover {
@@ -1179,6 +1173,7 @@ $darker-purple: #7426bd;
           .link-image {
             svg {
               fill: #dddddd;
+              filter: drop-shadow(2px 2px $purple);
             }
           }
           &:hover {
@@ -1198,6 +1193,7 @@ $darker-purple: #7426bd;
           .link-image {
             svg {
               fill: #dddddd;
+              filter: drop-shadow(2px 2px $purple);
             }
           }
           &:hover {
@@ -1325,14 +1321,6 @@ $very-dark-blue: #02588a;
       color: #1b1b1b;
       text-shadow: 1px 1px #938ab4;
     }
-    .theme-switch {
-      .theme-switch-button {
-        svg {
-          border-radius: 50%;
-          border: 2px solid #aaaaaa;
-        }
-      }
-    }
     .projects-button {
       color: $blue;
       text-shadow: 2px 2px $very-dark-blue;
@@ -1443,16 +1431,16 @@ $very-dark-blue: #02588a;
         }
         .blank-project-left,
         .blank-project-right {
-          background-color: #212121;
+          background-color: #282828;
         }
       }
       .film-backside {
-        background-color: #1d1d1d;
+        background-color: #1e1e1e;
       }
     }
     .TopSquares,
     .BottomSquares {
-      background-color: #2b2b2b;
+      background-color: #343434;
       .Square,
       .first-square,
       .last-square {
@@ -1489,7 +1477,7 @@ $very-dark-blue: #02588a;
       .project-menu-left-arrow,
       .project-menu-right-arrow {
         svg {
-          fill: $blue;
+          fill: #000;
         }
       }
       .project-menu-section {
@@ -1522,7 +1510,10 @@ $very-dark-blue: #02588a;
               }
               .project-link {
                 color: $blue;
-                text-shadow: 1px 1px #adadad;
+                text-shadow: 1px 2px $very-dark-blue;
+                font-weight: 700;
+                font-family: 'Montserrat';
+                font-size: 16px;
               }
             }
           }
@@ -1632,6 +1623,7 @@ $very-dark-blue: #02588a;
           .link-image {
             svg {
               fill: #061d36;
+              filter: drop-shadow(2px 2px $blue);
             }
           }
           &:hover {
@@ -1652,6 +1644,7 @@ $very-dark-blue: #02588a;
           .link-image {
             svg {
               fill: #061d36;
+              filter: drop-shadow(2px 2px $blue);
             }
           }
           &:hover {
@@ -1672,6 +1665,7 @@ $very-dark-blue: #02588a;
           .link-image {
             svg {
               fill: #061d36;
+              filter: drop-shadow(2px 2px $blue);
             }
           }
           &:hover {
