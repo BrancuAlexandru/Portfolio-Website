@@ -11,8 +11,8 @@ const Background:FC = () => {
   let theme = useContext(themeContext);
   const themes = [
     {
-      firstColor: '#f0f0f0',
-      middleColor: '#d8d8d8',
+      firstColor: '#ededed',
+      middleColor: '#fefefe',
       lastColor: '#adadad'
     },
     {

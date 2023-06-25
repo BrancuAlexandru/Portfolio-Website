@@ -86,6 +86,7 @@ a {
   z-index: 3;
   padding: 6px 3px 6px 9px;
   cursor: pointer;
+  animation: 0.7s ease backToTopArrowSlideUp;
 }
 
 .dark,
@@ -1291,17 +1292,18 @@ $darker-purple: #7426bd;
 $blue: #039ef8;
 $dark-blue: #008ddf;
 $darker-blue: #0c7fc2;
+$very-dark-blue: #02588a;
 
 .light {
   .section-title {
-    color: #ffffff;
-    text-shadow: 3px 3px #000000;
+    color: #061d36;
+    text-shadow: 3px 3px #a9a9a9;
   }
   .back-to-top-arrow {
-    background-color: #e6e6e6;
-    box-shadow: 2px 2px #c4c4c4;
+    background-color: $blue;
+    box-shadow: 2px 2px $very-dark-blue;
     svg {
-      fill: $blue;
+      fill: #fff;
     }
     &:hover {
       background-color: #f3f3f3;
@@ -1333,7 +1335,7 @@ $darker-blue: #0c7fc2;
     }
     .projects-button {
       color: $blue;
-      text-shadow: 2px 2px #ffffff;
+      text-shadow: 2px 2px $very-dark-blue;
       &:hover {
         color: $dark-blue;
         text-shadow: 2px 2px #b3b3b3;
@@ -1344,10 +1346,10 @@ $darker-blue: #0c7fc2;
       }
     }
     .contact-button {
-      background-color: #ffffff;
-      color: #363636;
-      text-shadow: 2px 2px #cacaca;
-      box-shadow: 3px 3px $blue;
+      background-color: $blue;
+      color: #fff;
+      text-shadow: 2px 2px $very-dark-blue;
+      box-shadow: 3px 3px $very-dark-blue;
       &:hover {
         background-color: $blue;
         color: #ffffff;
@@ -1360,19 +1362,19 @@ $darker-blue: #0c7fc2;
   }
   .Hero {
     .gradient {
-      background-image: linear-gradient(90deg, #ececec 50%, #d4d4d4 100%);
+      background-image: linear-gradient(90deg, #e3e3e3 50%, #3b99eb 100%);
       .gradient-left {
         h2 {
           color: #363636;
           text-shadow: 3px 2px #cccccc;
         }
         a {
-          background-color: #ffffff;
-          color: #363636;
-          box-shadow: 4px 4px $blue;
+          background-color: $blue;
+          color: #fff;
+          box-shadow: 4px 4px $very-dark-blue;
         }
         #show-me-button {
-          text-shadow: 2px 1px #cccccc;
+          text-shadow: 2px 2px $very-dark-blue;
           &:hover {
             background-color: #33b1fa;
             color: #ffffff;
@@ -1403,8 +1405,8 @@ $darker-blue: #0c7fc2;
   }
   .Projects {
     h1 {
-      color: #ffffff;
-      text-shadow: 3px 3px #000000;
+      color: #061d36;
+      text-shadow: 3px 3px #a9a9a9;
     }
     .film {
       .projects-content {
@@ -1597,17 +1599,17 @@ $darker-blue: #0c7fc2;
       .form {
         .text-input {
           background-color: #dddddd;
-          border-bottom: 5px solid $dark-blue;
-          color: #5a5a5a;
+          border-bottom: 5px solid $blue;
+          color: #061d36;
           &::placeholder {
-            color: #f1f1f1;
+            color: #ffffff;
           }
         }
         #submit-button {
-          background-color: #dddddd;
-          color: #f7f8ff;
-          text-shadow: 2px 1px $darker-blue;
-          box-shadow: 3px 3px $blue;
+          background-color: $blue;
+          color: #fff;
+          text-shadow: 2px 2px $very-dark-blue;
+          box-shadow: 3px 3px $very-dark-blue;
           &:hover {
             background-color: $blue;
             color: #ffffff;
@@ -1626,10 +1628,10 @@ $darker-blue: #0c7fc2;
           color: #acacac;
         }
         #GitHub-button {
-          color: #f1f1f1;
+          color: #061d36;
           .link-image {
             svg {
-              fill: #eeeeee;
+              fill: #061d36;
             }
           }
           &:hover {
@@ -1646,10 +1648,10 @@ $darker-blue: #0c7fc2;
           }
         }
         #resume-button {
-          color: #f1f1f1;
+          color: #061d36;
           .link-image {
             svg {
-              fill: #eeeeee;
+              fill: #061d36;
             }
           }
           &:hover {
@@ -1666,10 +1668,10 @@ $darker-blue: #0c7fc2;
           }
         }
         #LinkedIn-button {
-          color: #f1f1f1;
+          color: #061d36;
           .link-image {
             svg {
-              fill: #eeeeee;
+              fill: #061d36;
             }
           }
           &:hover {
@@ -1705,12 +1707,12 @@ $darker-blue: #0c7fc2;
       }
       .credits-wrapper {
         h2 {
-          color: #676767;
+          color: #061d36;
         }
         .credit-element {
           h3,
           p {
-            color: #676767;
+            color: #061d36;
           }
           a {
             color: $blue;
@@ -1720,9 +1722,10 @@ $darker-blue: #0c7fc2;
     }
     .closed {
       .credits-button {
-        background-color: #efefef;
-        color: #676767;
-        box-shadow: 3px 3px $blue;
+        background-color: $blue;
+        color: #fff;
+        box-shadow: 3px 3px $very-dark-blue;
+        text-shadow: 2px 2px $very-dark-blue;
       }
     }
   }
@@ -1774,6 +1777,15 @@ $darker-blue: #0c7fc2;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes backToTopArrowSlideUp {
+  0% {
+    bottom: -30%;
+  }
+  100% {
+    bottom: 20px;
   }
 }
 
