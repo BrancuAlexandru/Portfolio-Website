@@ -547,6 +547,9 @@ a {
               max-width: max-content;
               position: absolute;
               bottom: 5%; 
+              font-weight: 700;
+              font-family: 'Montserrat';
+              font-size: 16px;
             }
           }
         }
@@ -849,7 +852,7 @@ $darker-purple: #7426bd;
 .dark {
   .section-title {
     color: #e1e1e1;
-    text-shadow: 3px 3px #cecece;
+    text-shadow: 3px 3px #747474;
   }
   .back-to-top-arrow {
     background-color: $purple;
@@ -875,13 +878,13 @@ $darker-purple: #7426bd;
       text-shadow: 1px 1px #797979;
     }
     .projects-button {
-      color: #dadada;
-      text-shadow: 1px 1px #474747;
+      color: $purple;
+      text-shadow: 2px 2px #5d1f97;
       &:hover {
-        color: $purple;
+        color: #fff;
       }
       &:active {
-        color: $darker-purple;
+        color: #c4c4c4;
       }
     }
     .contact-button {
@@ -953,7 +956,7 @@ $darker-purple: #7426bd;
           border-top: 5px solid #2b2b2b;
           border-bottom: 5px solid #2b2b2b;
           &:hover {
-            border-bottom: 5px solid $dark-purple;
+            border-bottom: 5px solid $purple;
           }
           .project-image {
             #expandIcon {
@@ -1403,7 +1406,7 @@ $very-dark-blue: #02588a;
           border-top: 5px solid #2b2b2b;
           border-bottom: 5px solid #2b2b2b;
           &:hover {
-            border-bottom: 5px solid $dark-blue;
+            border-bottom: 5px solid $blue;
           }
           .project-image {
             #expandIcon {
@@ -1477,7 +1480,7 @@ $very-dark-blue: #02588a;
       .project-menu-left-arrow,
       .project-menu-right-arrow {
         svg {
-          fill: #000;
+          fill: $blue;
         }
       }
       .project-menu-section {
@@ -1489,7 +1492,7 @@ $very-dark-blue: #02588a;
               .left-arrow,
               .right-arrow {
                 svg {
-                  fill: #000000;
+                  fill: $blue;
                 }
               }
             }
@@ -1511,9 +1514,6 @@ $very-dark-blue: #02588a;
               .project-link {
                 color: $blue;
                 text-shadow: 1px 2px $very-dark-blue;
-                font-weight: 700;
-                font-family: 'Montserrat';
-                font-size: 16px;
               }
             }
           }
@@ -1577,7 +1577,7 @@ $very-dark-blue: #02588a;
             .left-arrow,
             .right-arrow {
               svg {
-                fill: #000000;
+                fill: $blue;
               }
             }
           }
